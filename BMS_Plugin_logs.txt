@@ -1,0 +1,825 @@
+starting plugin...
+searching for requirements.txt in /plugin/
+found! Installing with pip...
+----
+pip options: --disable-pip-version-check --no-cache-dir install --user
+Requirement already satisfied: pip in /opt/disqover_env/lib/python3.9/site-packages (22.1.2)
+Collecting pip
+  Downloading pip-23.0-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 82.0 MB/s eta 0:00:00
+ERROR: Will not install to the user site because it will lack sys.path precedence to pip in /opt/disqover_env/lib/python3.9/site-packages
+Looking in indexes: https://pypi.org/simple, https://pypi.ontoforce.com
+Requirement already satisfied: disqover-api in /opt/disqover_env/lib/python3.9/site-packages (from -r /plugin/plugin/requirements.txt (line 2)) (1.5.1)
+Requirement already satisfied: requests in /opt/disqover_env/lib/python3.9/site-packages (from -r /plugin/plugin/requirements.txt (line 3)) (2.27.1)
+Requirement already satisfied: PyYAML in /opt/disqover_env/lib/python3.9/site-packages (from disqover-api->-r /plugin/plugin/requirements.txt (line 2)) (5.4.1)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (1.26.5)
+Requirement already satisfied: idna<4,>=2.5 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (3.3)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (2.0.12)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (2020.12.5)
+[2023-02-07 07:07:19 +0000] [17] [INFO] Validation OK
+[2023-02-07 07:07:19 +0000] [17] [INFO] Registering with Plugin Center with {'data': {'id': 'local_download', 'type': 'plugin', 'attributes': {'name': 'Local Downloader'}}}.
+[2023-02-07 07:07:19 +0000] [17] [INFO] RESPONSE: 200 {'data': {'attributes': {'name': 'Local Downloader'}, 'id': 'local_download', 'type': 'plugin'}}
+[2023-02-07 07:07:19 +0000] [17] [INFO] Registration file written
+[2023-02-07 07:07:19 +0000] [17] [INFO] Starting gunicorn 20.1.0
+[2023-02-07 07:07:19 +0000] [17] [INFO] Listening at: http://0.0.0.0:8000 (17)
+[2023-02-07 07:07:19 +0000] [17] [INFO] Using worker: sync
+[2023-02-07 07:07:19 +0000] [17] [INFO] Database migrations not enabled
+[2023-02-07 07:07:19 +0000] [17] [INFO] Flask CLI commands not set
+[2023-02-07 07:07:19 +0000] [17] [INFO] Starting Task Workers
+[2023-02-07 07:07:19 +0000] [17] [INFO] Workers started: [<Process name='Process-1' pid=18 parent=17 started>]
+[2023-02-07 07:07:19 +0000] [19] [INFO] Booting worker with pid: 19
+[2023-02-07 07:07:19 +0000] [22] [INFO] Booting worker with pid: 22
+[2023-02-07 07:07:19 +0000] [23] [INFO] Booting worker with pid: 23
+[2023-02-07 07:07:19 +0000] [24] [INFO] Booting worker with pid: 24
+[2023-02-07 07:08:57 +0000] [24] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+Started task worker processes: [<Process name='Process-1' pid=18 parent=17 started>]
+plugin	[07/Feb/2023:07:08:57 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.002893	"-"	"python-requests/2.27.1"
+plugin	[07/Feb/2023:07:08:57 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000419	"-"	"python-requests/2.27.1"
+[2023-02-07 07:34:20 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 08:01:20 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 08:36:21 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 09:03:21 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 09:30:21 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 09:57:21 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 10:24:21 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 10:51:21 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 11:18:22 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 11:45:22 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 12:12:22 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 12:39:22 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 13:06:22 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 13:33:22 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 13:33:41 +0000] [24] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[07/Feb/2023:13:33:41 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.002870	"-"	"python-requests/2.27.1"
+plugin	[07/Feb/2023:13:33:41 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000418	"-"	"python-requests/2.27.1"
+[2023-02-07 14:00:23 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 14:27:23 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 14:54:23 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 15:21:23 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 15:48:23 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 15:56:08 +0000] [19] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+Started task worker processes: [<Process name='Process-1' pid=18 parent=17 started>]
+plugin	[07/Feb/2023:15:56:08 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.003733	"-"	"python-requests/2.27.1"
+plugin	[07/Feb/2023:15:56:08 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000406	"-"	"python-requests/2.27.1"
+[2023-02-07 16:15:24 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 16:42:24 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 17:09:24 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 17:36:24 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 18:03:24 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 18:30:24 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 18:57:24 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 19:24:25 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 19:51:25 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 20:18:25 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 20:45:25 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 21:12:25 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 21:39:26 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 22:06:26 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 22:33:26 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 23:00:26 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 23:27:27 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-07 23:54:27 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 00:21:27 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 00:48:27 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 01:15:27 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 01:42:27 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 02:09:28 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 02:36:28 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 03:03:28 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 03:30:28 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 03:57:28 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 04:24:28 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 04:51:29 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 05:18:29 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 05:45:29 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 06:12:29 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 06:39:29 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 07:06:30 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 07:33:30 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 08:00:30 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 08:27:30 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 08:54:30 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 09:21:31 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 09:48:31 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 10:15:31 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 10:42:31 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 11:09:31 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 11:36:31 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 12:03:32 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 12:30:32 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 12:57:32 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 13:24:32 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 13:51:32 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 14:18:33 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 14:45:33 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 14:48:03 +0000] [24] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:14:48:03 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.001594	"-"	"python-requests/2.27.1"
+Started task worker processes: [<Process name='Process-1' pid=18 parent=17 started>]
+plugin	[08/Feb/2023:14:48:03 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.001749	"-"	"python-requests/2.27.1"
+[2023-02-08 14:48:06 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:14:48:06 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000983	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:14:48:06 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000378	"-"	"python-requests/2.27.1"
+[2023-02-08 14:48:06 +0000] [19] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:14:48:06 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000749	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:14:48:06 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000385	"-"	"python-requests/2.27.1"
+[2023-02-08 14:52:14 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:14:52:14 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.001397	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:14:52:14 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000390	"-"	"python-requests/2.27.1"
+[2023-02-08 14:52:21 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+Started task worker processes: [<Process name='Process-1' pid=18 parent=17 started>]
+plugin	[08/Feb/2023:14:52:21 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.002325	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:14:52:21 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000444	"-"	"python-requests/2.27.1"
+[2023-02-08 14:52:24 +0000] [19] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:14:52:24 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000786	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:14:52:24 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000392	"-"	"python-requests/2.27.1"
+[2023-02-08 14:52:25 +0000] [24] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:14:52:25 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000928	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:14:52:25 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000416	"-"	"python-requests/2.27.1"
+[2023-02-08 14:55:25 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:14:55:25 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.001376	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:14:55:25 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000429	"-"	"python-requests/2.27.1"
+[2023-02-08 15:09:30 +0000] [19] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:15:09:30 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.001664	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:09:30 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000392	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:10:09 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000499	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:10:09 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000488	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:10:17 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000523	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:10:17 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000494	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:10:20 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000513	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:10:47 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000512	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:11:18 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000506	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:11:21 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000493	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:11:21 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000480	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:11:21 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:11:39 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000508	"-"	"python-requests/2.27.1"
+[2023-02-08 15:11:40 +0000] [19] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:15:11:40 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000738	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:11:40 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000381	"-"	"python-requests/2.27.1"
+[2023-02-08 15:12:33 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 15:13:30 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:15:13:30 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000719	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:13:30 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000385	"-"	"python-requests/2.27.1"
+[2023-02-08 15:22:29 +0000] [19] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:15:22:29 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.001400	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:22:29 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000417	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:26:51 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000481	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:27:21 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000506	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:27:51 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000509	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:28:21 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000498	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:28:52 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000486	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:29:21 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:29:52 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000472	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:30:22 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000483	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:30:52 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000509	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:31:22 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000489	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:31:52 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000520	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:32:22 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000535	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:32:52 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000488	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:33:23 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000512	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:33:53 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000511	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:34:23 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000503	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:34:53 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000504	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:35:23 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000497	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:35:53 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000482	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:36:23 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000488	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:36:53 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:37:24 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000485	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:37:54 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000509	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:38:24 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000527	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:38:54 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000490	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:39:24 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000478	"-"	"python-requests/2.27.1"
+[2023-02-08 15:39:33 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+plugin	[08/Feb/2023:15:39:54 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000509	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:40:24 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000483	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:40:55 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000482	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:41:25 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000498	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:41:55 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000485	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:42:25 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000519	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:42:56 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000481	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:43:25 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000489	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:43:55 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000491	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:44:25 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000485	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:44:55 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000499	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:45:26 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000490	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:45:56 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000502	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:46:26 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000505	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:46:56 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000478	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:47:26 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000503	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:47:56 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000485	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:48:26 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000498	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:48:56 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:49:27 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000480	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:49:57 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000475	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:50:27 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000507	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:50:57 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000486	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:51:27 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000493	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:51:57 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000488	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:52:27 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000505	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:52:58 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000508	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:53:28 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000503	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:53:58 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000483	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:54:28 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000519	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:54:58 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:55:28 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000512	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:55:58 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000487	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:56:29 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000504	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:56:59 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:57:29 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000493	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:57:59 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000551	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:58:29 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000506	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:58:59 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000486	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:15:59:29 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000506	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:00:00 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000481	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:00:29 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000480	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:01:00 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000491	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:01:30 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000500	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:02:00 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000513	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:02:30 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000517	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:03:00 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000529	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:03:30 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000492	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:04:01 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000496	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:04:31 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000519	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:05:01 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000505	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:05:31 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000486	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:06:02 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000488	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:06:32 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000495	"-"	"python-requests/2.27.1"
+[2023-02-08 16:06:34 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+plugin	[08/Feb/2023:16:07:01 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000504	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:07:31 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000501	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:08:02 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000505	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:08:32 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000490	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:09:02 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000482	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:09:32 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000510	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:10:02 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:10:32 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000490	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:11:02 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000516	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:11:32 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000470	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:12:02 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000480	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:12:32 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000521	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:13:03 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000487	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:13:33 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000515	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:14:03 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000512	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:14:33 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000518	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:15:03 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000501	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:15:33 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000510	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:16:04 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000494	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:16:33 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000472	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:17:04 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000492	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:17:34 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000504	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:18:04 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000514	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:18:34 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000484	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:19:04 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000509	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:19:34 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000501	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:20:04 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000485	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:20:34 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000519	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:21:05 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000515	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:21:36 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000502	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:22:07 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000495	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:22:38 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000515	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:23:09 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000508	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:23:40 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000499	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:24:14 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000513	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:24:45 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000491	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:25:16 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000486	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:25:47 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000476	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:26:18 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000485	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:26:49 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000508	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:27:20 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000474	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:27:51 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000508	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:28:27 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000494	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:29:27 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000496	"-"	"python-requests/2.27.1"
+[2023-02-08 16:33:34 +0000] [18] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+[2023-02-08 16:43:39 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:16:43:39 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.001382	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:43:39 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000377	"-"	"python-requests/2.27.1"
+[2023-02-08 16:43:45 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:16:43:45 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000728	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:43:45 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000381	"-"	"python-requests/2.27.1"
+[2023-02-08 16:43:49 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:16:43:49 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000746	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:43:49 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000392	"-"	"python-requests/2.27.1"
+[2023-02-08 16:44:02 +0000] [19] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:16:44:02 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000853	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:44:02 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000411	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:44:02 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000408	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:16:44:02 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000641	"-"	"python-requests/2.27.1"
+[2023-02-08 16:44:36 +0000] [18] [INFO] [worker] queue-plugin-local_download: Call a plugin asynchronously via Plugin Center (e6e7858f-c9ab-4ea5-9470-6a930467aa90)
+[2023-02-08 16:44:36 +0000] [25] [INFO] Validation OK
+[2023-02-08 16:44:36 +0000] [25] [INFO] Registering with Plugin Center with {'data': {'id': 'local_download', 'type': 'plugin', 'attributes': {'name': 'Local Downloader'}}}.
+[2023-02-08 16:44:36 +0000] [25] [INFO] RESPONSE: 200 {'data': {'attributes': {'name': 'Local Downloader'}, 'id': 'local_download', 'type': 'plugin'}}
+[2023-02-08 16:44:36 +0000] [25] [INFO] Registration file written
+[2023-02-08 16:44:36 +0000] [25] [INFO] Starting process events. json_data={'session_options_values': {'canonical_type': 'http://ns.bms.com/disqover.ontology/canonical_type/clinical_study', 'federation_pwd': 'adminadmin', 'federation_user': 'admin@ontoforce.com', 'federation_server': 'http://ontoforce-dev.web-dev.bms.com/', 'create_pipeline_bool': False, 'data_source_uri_list': 'all'}, 'events': [{'event_type': 'schedule', 'context_data': {}, 'created_at': '2023-02-08 16:44:36.020790'}]}
+[2023-02-08 16:44:36 +0000] [25] [INFO] using random session_id
+[2023-02-08 16:44:36 +0000] [25] [INFO] 7b44be71-5005-4adb-a73c-e4e9ff9155e5 Creating necessary directories for the plugin
+[2023-02-08 16:44:36 +0000] [25] [INFO] 7b44be71-5005-4adb-a73c-e4e9ff9155e5 Starting Federation session to download following data sources from CT http://ns.bms.com/disqover.ontology/canonical_type/clinical_study: [all]
+[2023-02-08 16:44:37 +0000] [25] [INFO] 7b44be71-5005-4adb-a73c-e4e9ff9155e5 Saving Ontology and Data Source information for http://ns.bms.com/disqover.ontology/canonical_type/clinical_study...
+[2023-02-08 16:44:40 +0000] [25] [INFO] 7b44be71-5005-4adb-a73c-e4e9ff9155e5 Saving Configuration information for http://ns.bms.com/disqover.ontology/canonical_type/clinical_study...
+[2023-02-08 16:44:43 +0000] [25] [INFO] 7b44be71-5005-4adb-a73c-e4e9ff9155e5 Starting download of 984361 instances...
+starting plugin...
+searching for requirements.txt in /plugin/
+found! Installing with pip...
+----
+pip options: --disable-pip-version-check --no-cache-dir install --user
+Requirement already satisfied: pip in /opt/disqover_env/lib/python3.9/site-packages (22.1.2)
+Collecting pip
+  Downloading pip-23.0-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 52.3 MB/s eta 0:00:00
+ERROR: Will not install to the user site because it will lack sys.path precedence to pip in /opt/disqover_env/lib/python3.9/site-packages
+Looking in indexes: https://pypi.org/simple, https://pypi.ontoforce.com
+Requirement already satisfied: disqover-api in /opt/disqover_env/lib/python3.9/site-packages (from -r /plugin/plugin/requirements.txt (line 2)) (1.5.1)
+Requirement already satisfied: requests in /opt/disqover_env/lib/python3.9/site-packages (from -r /plugin/plugin/requirements.txt (line 3)) (2.27.1)
+Requirement already satisfied: PyYAML in /opt/disqover_env/lib/python3.9/site-packages (from disqover-api->-r /plugin/plugin/requirements.txt (line 2)) (5.4.1)
+Requirement already satisfied: idna<4,>=2.5 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (3.3)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (1.26.5)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (2.0.12)
+----
+Libraries available: 
+alembic==1.6.2
+api-base @ file:///bisq_repo/libs/api_base
+apispec==4.4.1
+certifi==2020.12.5
+cffi==1.14.5
+chardet==4.0.0
+charset-normalizer==2.0.12
+click==7.1.2
+cryptography==3.4.7
+disq-plugin @ file:///bisq_repo/services/disq_plugin
+disqover-api @ file:///bisq_repo/libs/disqover_api
+Flask==1.1.2
+flask-apispec==0.11.0
+Flask-JWT-Extended==3.25.0
+Flask-Migrate==2.7.0
+Flask-SQLAlchemy==2.5.1
+gunicorn==20.1.0
+idna==3.3
+itsdangerous==1.1.0
+Jinja2==2.11.3
+Mako==1.1.4
+MarkupSafe==1.1.1
+marshmallow==3.12.0
+marshmallow-jsonapi==0.24.0
+psycopg2-binary==2.8.6
+pycparser==2.20
+PyJWT==1.7.1
+python-dateutil==2.8.1
+python-editor==1.0.4
+PyYAML==5.4.1
+redis==3.5.3
+requests==2.27.1
+retrying==1.3.3
+rq==1.7.0
+six==1.16.0
+SQLAlchemy==1.3.24
+sqlalchemy-filters @ git+https://github.com/dewaegw/sqlalchemy-filters@0dc1566886a821309cc74e993070bcd9187b3982
+SQLAlchemy-Utils==0.37.2
+urllib3==1.26.5
+webargs==8.0.0
+Werkzeug==1.0.1
+starting plugin app...
+Gunicorn config for plugin:
+  __name__=api_base.gunicorn_base
+  __doc__=None
+  __package__=api_base
+  __loader__=<_frozen_importlib_external.SourcelessFileLoader object at 0x7fc62d2536a0>
+  __spec__=ModuleSpec(name='api_base.gunicorn_base', loader=<_frozen_importlib_external.SourcelessFileLoader object at 0x7fc62d2536a0>, origin='/opt/disqover_env/lib/python3.9/site-packages/api_base/gunicorn_base.pyc')
+  __file__=/opt/disqover_env/lib/python3.9/site-packages/api_base/gunicorn_base.pyc
+  __cached__=/opt/disqover_env/lib/python3.9/site-packages/api_base/gunicorn_base.pyc
+  __builtins__={'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, 'getattr': <built-in function getattr>, 'globals': <built-in function globals>, 'hasattr': <built-in function hasattr>, 'hash': <built-in function hash>, 'hex': <built-in function hex>, 'id': <built-in function id>, 'input': <built-in function input>, 'isinstance': <built-in function isinstance>, 'issubclass': <built-in function issubclass>, 'iter': <built-in function iter>, 'len': <built-in function len>, 'locals': <built-in function locals>, 'max': <built-in function max>, 'min': <built-in function min>, 'next': <built-in function next>, 'oct': <built-in function oct>, 'ord': <built-in function ord>, 'pow': <built-in function pow>, 'print': <built-in function print>, 'repr': <built-in function repr>, 'round': <built-in function round>, 'setattr': <built-in function setattr>, 'sorted': <built-in function sorted>, 'sum': <built-in function sum>, 'vars': <built-in function vars>, 'None': None, 'Ellipsis': Ellipsis, 'NotImplemented': NotImplemented, 'False': False, 'True': True, 'bool': <class 'bool'>, 'memoryview': <class 'memoryview'>, 'bytearray': <class 'bytearray'>, 'bytes': <class 'bytes'>, 'classmethod': <class 'classmethod'>, 'complex': <class 'complex'>, 'dict': <class 'dict'>, 'enumerate': <class 'enumerate'>, 'filter': <class 'filter'>, 'float': <class 'float'>, 'frozenset': <class 'frozenset'>, 'property': <class 'property'>, 'int': <class 'int'>, 'list': <class 'list'>, 'map': <class 'map'>, 'object': <class 'object'>, 'range': <class 'range'>, 'reversed': <class 'reversed'>, 'set': <class 'set'>, 'slice': <class 'slice'>, 'staticmethod': <class 'staticmethod'>, 'str': <class 'str'>, 'super': <class 'super'>, 'tuple': <class 'tuple'>, 'type': <class 'type'>, 'zip': <class 'zip'>, '__debug__': True, 'BaseException': <class 'BaseException'>, 'Exception': <class 'Exception'>, 'TypeError': <class 'TypeError'>, 'StopAsyncIteration': <class 'StopAsyncIteration'>, 'StopIteration': <class 'StopIteration'>, 'GeneratorExit': <class 'GeneratorExit'>, 'SystemExit': <class 'SystemExit'>, 'KeyboardInterrupt': <class 'KeyboardInterrupt'>, 'ImportError': <class 'ImportError'>, 'ModuleNotFoundError': <class 'ModuleNotFoundError'>, 'OSError': <class 'OSError'>, 'EnvironmentError': <class 'OSError'>, 'IOError': <class 'OSError'>, 'EOFError': <class 'EOFError'>, 'RuntimeError': <class 'RuntimeError'>, 'RecursionError': <class 'RecursionError'>, 'NotImplementedError': <class 'NotImplementedError'>, 'NameError': <class 'NameError'>, 'UnboundLocalError': <class 'UnboundLocalError'>, 'AttributeError': <class 'AttributeError'>, 'SyntaxError': <class 'SyntaxError'>, 'IndentationError': <class 'IndentationError'>, 'TabError': <class 'TabError'>, 'LookupError': <class 'LookupError'>, 'IndexError': <class 'IndexError'>, 'KeyError': <class 'KeyError'>, 'ValueError': <class 'ValueError'>, 'UnicodeError': <class 'UnicodeError'>, 'UnicodeEncodeError': <class 'UnicodeEncodeError'>, 'UnicodeDecodeError': <class 'UnicodeDecodeError'>, 'UnicodeTranslateError': <class 'UnicodeTranslateError'>, 'AssertionError': <class 'AssertionError'>, 'ArithmeticError': <class 'ArithmeticError'>, 'FloatingPointError': <class 'FloatingPointError'>, 'OverflowError': <class 'OverflowError'>, 'ZeroDivisionError': <class 'ZeroDivisionError'>, 'SystemError': <class 'SystemError'>, 'ReferenceError': <class 'ReferenceError'>, 'MemoryError': <class 'MemoryError'>, 'BufferError': <class 'BufferError'>, 'Warning': <class 'Warning'>, 'UserWarning': <class 'UserWarning'>, 'DeprecationWarning': <class 'DeprecationWarning'>, 'PendingDeprecationWarning': <class 'PendingDeprecationWarning'>, 'SyntaxWarning': <class 'SyntaxWarning'>, 'RuntimeWarning': <class 'RuntimeWarning'>, 'FutureWarning': <class 'FutureWarning'>, 'ImportWarning': <class 'ImportWarning'>, 'UnicodeWarning': <class 'UnicodeWarning'>, 'BytesWarning': <class 'BytesWarning'>, 'ResourceWarning': <class 'ResourceWarning'>, 'ConnectionError': <class 'ConnectionError'>, 'BlockingIOError': <class 'BlockingIOError'>, 'BrokenPipeError': <class 'BrokenPipeError'>, 'ChildProcessError': <class 'ChildProcessError'>, 'ConnectionAbortedError': <class 'ConnectionAbortedError'>, 'ConnectionRefusedError': <class 'ConnectionRefusedError'>, 'ConnectionResetError': <class 'ConnectionResetError'>, 'FileExistsError': <class 'FileExistsError'>, 'FileNotFoundError': <class 'FileNotFoundError'>, 'IsADirectoryError': <class 'IsADirectoryError'>, 'NotADirectoryError': <class 'NotADirectoryError'>, 'InterruptedError': <class 'InterruptedError'>, 'PermissionError': <class 'PermissionError'>, 'ProcessLookupError': <class 'ProcessLookupError'>, 'TimeoutError': <class 'TimeoutError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'exit': Use exit() or Ctrl-D (i.e. EOF) to exit, 'copyright': Copyright (c) 2001-2021 Python Software Foundation.
+All Rights Reserved.
+Copyright (c) 2000 BeOpen.com.
+All Rights Reserved.
+Copyright (c) 1995-2001 Corporation for National Research Initiatives.
+All Rights Reserved.
+Copyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.
+All Rights Reserved., 'credits':     Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands
+    for supporting Python development.  See www.python.org for more information., 'license': Type license() to see the full license text, 'help': Type help() for interactive help, or help(object) for help about object.}
+  os=<module 'os' from '/usr/local/lib/python3.9/os.py'>
+  subprocess=<module 'subprocess' from '/usr/local/lib/python3.9/subprocess.py'>
+  atexit=<module 'atexit' (built-in)>
+  _exit_function=<function _exit_function at 0x7fc62cc743a0>
+  start_task_workers=<function start_task_workers at 0x7fc628529b80>
+  stop_task_workers=<function stop_task_workers at 0x7fc628529c10>
+  SERVICE_NAME=plugin
+  TASK_WORKER_CONFIG=<class '__config__.get_task_worker_config.<locals>.TaskWorkerConfig'>
+  MIGRATE_DB=False
+  FLASK_CLI_COMMANDS=[]
+  WORKER_PROCESSES=[]
+  FLASK_APP=plugin
+  set_flask_app_name=<function set_flask_app_name at 0x7fc62cd22d30>
+  set_flask_cli_commands=<function set_flask_cli_commands at 0x7fc628529ca0>
+  set_worker_config=<function set_worker_config at 0x7fc628529e50>
+  enable_database_migrations=<function enable_database_migrations at 0x7fc628529ee0>
+  _run_flask_cli=<function _run_flask_cli at 0x7fc628529f70>
+  _run_migrations=<function _run_migrations at 0x7fc628526040>
+  _start_task_workers=<function _start_task_workers at 0x7fc6285260d0>
+  when_ready=<function when_ready at 0x7fc628526160>
+  on_exit=<function on_exit at 0x7fc6285261f0>
+[2023-02-08 16:46:06 +0000] [16] [INFO] Validation OK
+[2023-02-08 16:46:06 +0000] [16] [INFO] Registering with Plugin Center with {'data': {'id': 'local_download', 'type': 'plugin', 'attributes': {'name': 'Local Downloader'}}}.
+[2023-02-08 16:46:06 +0000] [16] [INFO] RESPONSE: 200 {'data': {'attributes': {'name': 'Local Downloader'}, 'id': 'local_download', 'type': 'plugin'}}
+[2023-02-08 16:46:06 +0000] [16] [INFO] Registration file written
+[2023-02-08 16:46:06 +0000] [16] [INFO] Starting gunicorn 20.1.0
+[2023-02-08 16:46:06 +0000] [16] [INFO] Listening at: http://0.0.0.0:8000 (16)
+[2023-02-08 16:46:06 +0000] [16] [INFO] Using worker: sync
+[2023-02-08 16:46:06 +0000] [16] [INFO] Database migrations not enabled
+[2023-02-08 16:46:06 +0000] [16] [INFO] Flask CLI commands not set
+[2023-02-08 16:46:06 +0000] [16] [INFO] Starting Task Workers
+  post_worker_init=<function post_worker_init at 0x7fc628526280>
+  display_config=<function display_config at 0x7fc628526310>
+  get_from_env=<function get_from_env at 0x7fc6285263a0>
+  ENV=production
+  _is_dev_mode=False
+  LOG_LEVEL=info
+  TIMEOUT=300
+  PORT_INT=8000
+  NR_OF_WORKERS=4
+  bind=0.0.0.0:8000
+  workers=4
+  timeout=300
+  reload=False
+  spew=False
+  errorlog=-
+  loglevel=info
+  accesslog=-
+  access_log_format=plugin	%(t)s	%(h)s	%(l)s	%(u)s	"%(r)s"	%(s)s	%(b)s	%(L)s	"%(f)s"	"%(a)s"
+INFO	Starting validation
+INFO	Validation OK
+[2023-02-08 16:46:06 +0000] [16] [INFO] Workers started: [<Process name='Process-1' pid=17 parent=16 started>]
+[2023-02-08 16:46:06 +0000] [18] [INFO] Booting worker with pid: 18
+[2023-02-08 16:46:06 +0000] [17] [INFO] [worker] Worker rq:worker:python-worker-plugin-local_download-0: started, version 1.7.0
+[2023-02-08 16:46:06 +0000] [17] [INFO] [worker] Subscribing to channel rq:pubsub:python-worker-plugin-local_download-0
+[2023-02-08 16:46:06 +0000] [17] [INFO] [worker] *** Listening on queue-plugin-local_download...
+[2023-02-08 16:46:06 +0000] [17] [INFO] [scheduler] Trying to acquire locks for queue-plugin-local_download
+[2023-02-08 16:46:06 +0000] [20] [INFO] [scheduler] Scheduler for queue-plugin-local_download started with PID 20
+[2023-02-08 16:46:06 +0000] [21] [INFO] Booting worker with pid: 21
+[2023-02-08 16:46:06 +0000] [22] [INFO] Booting worker with pid: 22
+[2023-02-08 16:46:06 +0000] [23] [INFO] Booting worker with pid: 23
+[2023-02-08 16:59:36 +0000] [17] [INFO] [worker] Cleaning registries for queue: queue-plugin-local_download
+starting plugin...
+searching for requirements.txt in /plugin/
+found! Installing with pip...
+----
+pip options: --disable-pip-version-check --no-cache-dir install --user
+Requirement already satisfied: pip in /opt/disqover_env/lib/python3.9/site-packages (22.1.2)
+Collecting pip
+  Downloading pip-23.0-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 107.6 MB/s eta 0:00:00
+ERROR: Will not install to the user site because it will lack sys.path precedence to pip in /opt/disqover_env/lib/python3.9/site-packages
+Looking in indexes: https://pypi.org/simple, https://pypi.ontoforce.com
+Requirement already satisfied: disqover-api in /opt/disqover_env/lib/python3.9/site-packages (from -r /plugin/plugin/requirements.txt (line 2)) (1.5.1)
+Requirement already satisfied: requests in /opt/disqover_env/lib/python3.9/site-packages (from -r /plugin/plugin/requirements.txt (line 3)) (2.27.1)
+Requirement already satisfied: PyYAML in /opt/disqover_env/lib/python3.9/site-packages (from disqover-api->-r /plugin/plugin/requirements.txt (line 2)) (5.4.1)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (2.0.12)
+Requirement already satisfied: idna<4,>=2.5 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (3.3)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/disqover_env/lib/python3.9/site-packages (from requests->-r /plugin/plugin/requirements.txt (line 3)) (1.26.5)
+----
+Libraries available: 
+alembic==1.6.2
+api-base @ file:///bisq_repo/libs/api_base
+apispec==4.4.1
+certifi==2020.12.5
+cffi==1.14.5
+chardet==4.0.0
+charset-normalizer==2.0.12
+click==7.1.2
+cryptography==3.4.7
+disq-plugin @ file:///bisq_repo/services/disq_plugin
+disqover-api @ file:///bisq_repo/libs/disqover_api
+Flask==1.1.2
+flask-apispec==0.11.0
+Flask-JWT-Extended==3.25.0
+Flask-Migrate==2.7.0
+Flask-SQLAlchemy==2.5.1
+gunicorn==20.1.0
+idna==3.3
+itsdangerous==1.1.0
+Jinja2==2.11.3
+Mako==1.1.4
+MarkupSafe==1.1.1
+marshmallow==3.12.0
+marshmallow-jsonapi==0.24.0
+psycopg2-binary==2.8.6
+pycparser==2.20
+PyJWT==1.7.1
+python-dateutil==2.8.1
+python-editor==1.0.4
+PyYAML==5.4.1
+redis==3.5.3
+requests==2.27.1
+retrying==1.3.3
+rq==1.7.0
+six==1.16.0
+SQLAlchemy==1.3.24
+sqlalchemy-filters @ git+https://github.com/dewaegw/sqlalchemy-filters@0dc1566886a821309cc74e993070bcd9187b3982
+SQLAlchemy-Utils==0.37.2
+urllib3==1.26.5
+webargs==8.0.0
+Werkzeug==1.0.1
+starting plugin app...
+Gunicorn config for plugin:
+  __name__=api_base.gunicorn_base
+  __doc__=None
+  __package__=api_base
+  __loader__=<_frozen_importlib_external.SourcelessFileLoader object at 0x7fb0505316a0>
+  __spec__=ModuleSpec(name='api_base.gunicorn_base', loader=<_frozen_importlib_external.SourcelessFileLoader object at 0x7fb0505316a0>, origin='/opt/disqover_env/lib/python3.9/site-packages/api_base/gunicorn_base.pyc')
+  __file__=/opt/disqover_env/lib/python3.9/site-packages/api_base/gunicorn_base.pyc
+  __cached__=/opt/disqover_env/lib/python3.9/site-packages/api_base/gunicorn_base.pyc
+  __builtins__={'__name__': 'builtins', '__doc__': "Built-in functions, exceptions, and other objects.\n\nNoteworthy: None is the `nil' object; Ellipsis represents `...' in slices.", '__package__': '', '__loader__': <class '_frozen_importlib.BuiltinImporter'>, '__spec__': ModuleSpec(name='builtins', loader=<class '_frozen_importlib.BuiltinImporter'>, origin='built-in'), '__build_class__': <built-in function __build_class__>, '__import__': <built-in function __import__>, 'abs': <built-in function abs>, 'all': <built-in function all>, 'any': <built-in function any>, 'ascii': <built-in function ascii>, 'bin': <built-in function bin>, 'breakpoint': <built-in function breakpoint>, 'callable': <built-in function callable>, 'chr': <built-in function chr>, 'compile': <built-in function compile>, 'delattr': <built-in function delattr>, 'dir': <built-in function dir>, 'divmod': <built-in function divmod>, 'eval': <built-in function eval>, 'exec': <built-in function exec>, 'format': <built-in function format>, 'getattr': <built-in function getattr>, 'globals': <built-in function globals>, 'hasattr': <built-in function hasattr>, 'hash': <built-in function hash>, 'hex': <built-in function hex>, 'id': <built-in function id>, 'input': <built-in function input>, 'isinstance': <built-in function isinstance>, 'issubclass': <built-in function issubclass>, 'iter': <built-in function iter>, 'len': <built-in function len>, 'locals': <built-in function locals>, 'max': <built-in function max>, 'min': <built-in function min>, 'next': <built-in function next>, 'oct': <built-in function oct>, 'ord': <built-in function ord>, 'pow': <built-in function pow>, 'print': <built-in function print>, 'repr': <built-in function repr>, 'round': <built-in function round>, 'setattr': <built-in function setattr>, 'sorted': <built-in function sorted>, 'sum': <built-in function sum>, 'vars': <built-in function vars>, 'None': None, 'Ellipsis': Ellipsis, 'NotImplemented': NotImplemented, 'False': False, 'True': True, 'bool': <class 'bool'>, 'memoryview': <class 'memoryview'>, 'bytearray': <class 'bytearray'>, 'bytes': <class 'bytes'>, 'classmethod': <class 'classmethod'>, 'complex': <class 'complex'>, 'dict': <class 'dict'>, 'enumerate': <class 'enumerate'>, 'filter': <class 'filter'>, 'float': <class 'float'>, 'frozenset': <class 'frozenset'>, 'property': <class 'property'>, 'int': <class 'int'>, 'list': <class 'list'>, 'map': <class 'map'>, 'object': <class 'object'>, 'range': <class 'range'>, 'reversed': <class 'reversed'>, 'set': <class 'set'>, 'slice': <class 'slice'>, 'staticmethod': <class 'staticmethod'>, 'str': <class 'str'>, 'super': <class 'super'>, 'tuple': <class 'tuple'>, 'type': <class 'type'>, 'zip': <class 'zip'>, '__debug__': True, 'BaseException': <class 'BaseException'>, 'Exception': <class 'Exception'>, 'TypeError': <class 'TypeError'>, 'StopAsyncIteration': <class 'StopAsyncIteration'>, 'StopIteration': <class 'StopIteration'>, 'GeneratorExit': <class 'GeneratorExit'>, 'SystemExit': <class 'SystemExit'>, 'KeyboardInterrupt': <class 'KeyboardInterrupt'>, 'ImportError': <class 'ImportError'>, 'ModuleNotFoundError': <class 'ModuleNotFoundError'>, 'OSError': <class 'OSError'>, 'EnvironmentError': <class 'OSError'>, 'IOError': <class 'OSError'>, 'EOFError': <class 'EOFError'>, 'RuntimeError': <class 'RuntimeError'>, 'RecursionError': <class 'RecursionError'>, 'NotImplementedError': <class 'NotImplementedError'>, 'NameError': <class 'NameError'>, 'UnboundLocalError': <class 'UnboundLocalError'>, 'AttributeError': <class 'AttributeError'>, 'SyntaxError': <class 'SyntaxError'>, 'IndentationError': <class 'IndentationError'>, 'TabError': <class 'TabError'>, 'LookupError': <class 'LookupError'>, 'IndexError': <class 'IndexError'>, 'KeyError': <class 'KeyError'>, 'ValueError': <class 'ValueError'>, 'UnicodeError': <class 'UnicodeError'>, 'UnicodeEncodeError': <class 'UnicodeEncodeError'>, 'UnicodeDecodeError': <class 'UnicodeDecodeError'>, 'UnicodeTranslateError': <class 'UnicodeTranslateError'>, 'AssertionError': <class 'AssertionError'>, 'ArithmeticError': <class 'ArithmeticError'>, 'FloatingPointError': <class 'FloatingPointError'>, 'OverflowError': <class 'OverflowError'>, 'ZeroDivisionError': <class 'ZeroDivisionError'>, 'SystemError': <class 'SystemError'>, 'ReferenceError': <class 'ReferenceError'>, 'MemoryError': <class 'MemoryError'>, 'BufferError': <class 'BufferError'>, 'Warning': <class 'Warning'>, 'UserWarning': <class 'UserWarning'>, 'DeprecationWarning': <class 'DeprecationWarning'>, 'PendingDeprecationWarning': <class 'PendingDeprecationWarning'>, 'SyntaxWarning': <class 'SyntaxWarning'>, 'RuntimeWarning': <class 'RuntimeWarning'>, 'FutureWarning': <class 'FutureWarning'>, 'ImportWarning': <class 'ImportWarning'>, 'UnicodeWarning': <class 'UnicodeWarning'>, 'BytesWarning': <class 'BytesWarning'>, 'ResourceWarning': <class 'ResourceWarning'>, 'ConnectionError': <class 'ConnectionError'>, 'BlockingIOError': <class 'BlockingIOError'>, 'BrokenPipeError': <class 'BrokenPipeError'>, 'ChildProcessError': <class 'ChildProcessError'>, 'ConnectionAbortedError': <class 'ConnectionAbortedError'>, 'ConnectionRefusedError': <class 'ConnectionRefusedError'>, 'ConnectionResetError': <class 'ConnectionResetError'>, 'FileExistsError': <class 'FileExistsError'>, 'FileNotFoundError': <class 'FileNotFoundError'>, 'IsADirectoryError': <class 'IsADirectoryError'>, 'NotADirectoryError': <class 'NotADirectoryError'>, 'InterruptedError': <class 'InterruptedError'>, 'PermissionError': <class 'PermissionError'>, 'ProcessLookupError': <class 'ProcessLookupError'>, 'TimeoutError': <class 'TimeoutError'>, 'open': <built-in function open>, 'quit': Use quit() or Ctrl-D (i.e. EOF) to exit, 'exit': Use exit() or Ctrl-D (i.e. EOF) to exit, 'copyright': Copyright (c) 2001-2021 Python Software Foundation.
+All Rights Reserved.
+Copyright (c) 2000 BeOpen.com.
+All Rights Reserved.
+Copyright (c) 1995-2001 Corporation for National Research Initiatives.
+All Rights Reserved.
+Copyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.
+All Rights Reserved., 'credits':     Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands
+    for supporting Python development.  See www.python.org for more information., 'license': Type license() to see the full license text, 'help': Type help() for interactive help, or help(object) for help about object.}
+  os=<module 'os' from '/usr/local/lib/python3.9/os.py'>
+  subprocess=<module 'subprocess' from '/usr/local/lib/python3.9/subprocess.py'>
+  atexit=<module 'atexit' (built-in)>
+  _exit_function=<function _exit_function at 0x7fb04ff523a0>
+  start_task_workers=<function start_task_workers at 0x7fb04b805b80>
+  stop_task_workers=<function stop_task_workers at 0x7fb04b805c10>
+  SERVICE_NAME=plugin
+  TASK_WORKER_CONFIG=<class '__config__.get_task_worker_config.<locals>.TaskWorkerConfig'>
+  MIGRATE_DB=False
+  FLASK_CLI_COMMANDS=[]
+  WORKER_PROCESSES=[]
+  FLASK_APP=plugin
+  set_flask_app_name=<function set_flask_app_name at 0x7fb04ffffd30>
+  set_flask_cli_commands=<function set_flask_cli_commands at 0x7fb04b805ca0>
+  set_worker_config=<function set_worker_config at 0x7fb04b805e50>
+  enable_database_migrations=<function enable_database_migrations at 0x7fb04b805ee0>
+  _run_flask_cli=<function _run_flask_cli at 0x7fb04b805f70>
+  _run_migrations=<function _run_migrations at 0x7fb04b803040>
+  _start_task_workers=<function _start_task_workers at 0x7fb04b8030d0>
+  when_ready=<function when_ready at 0x7fb04b803160>
+  on_exit=<function on_exit at 0x7fb04b8031f0>
+[2023-02-08 17:16:35 +0000] [16] [INFO] Validation OK
+[2023-02-08 17:16:35 +0000] [16] [INFO] Registering with Plugin Center with {'data': {'id': 'BMS_download_2', 'type': 'plugin', 'attributes': {'name': 'BMS Downloader 2'}}}.
+[2023-02-08 17:16:35 +0000] [16] [INFO] RESPONSE: 200 {'data': {'attributes': {'name': 'BMS Downloader 2'}, 'id': 'BMS_download_2', 'type': 'plugin'}}
+[2023-02-08 17:16:35 +0000] [16] [INFO] Registration file written
+[2023-02-08 17:16:35 +0000] [16] [INFO] Starting gunicorn 20.1.0
+[2023-02-08 17:16:35 +0000] [16] [INFO] Listening at: http://0.0.0.0:8000 (16)
+[2023-02-08 17:16:35 +0000] [16] [INFO] Using worker: sync
+[2023-02-08 17:16:35 +0000] [16] [INFO] Database migrations not enabled
+[2023-02-08 17:16:35 +0000] [16] [INFO] Flask CLI commands not set
+[2023-02-08 17:16:35 +0000] [16] [INFO] Starting Task Workers
+  post_worker_init=<function post_worker_init at 0x7fb04b803280>
+  display_config=<function display_config at 0x7fb04b803310>
+  get_from_env=<function get_from_env at 0x7fb04b8033a0>
+  ENV=production
+  _is_dev_mode=False
+  LOG_LEVEL=info
+  TIMEOUT=300
+  PORT_INT=8000
+  NR_OF_WORKERS=4
+  bind=0.0.0.0:8000
+  workers=4
+  timeout=300
+  reload=False
+  spew=False
+  errorlog=-
+  loglevel=info
+  accesslog=-
+  access_log_format=plugin	%(t)s	%(h)s	%(l)s	%(u)s	"%(r)s"	%(s)s	%(b)s	%(L)s	"%(f)s"	"%(a)s"
+INFO	Starting validation
+INFO	Validation OK
+[2023-02-08 17:16:35 +0000] [16] [INFO] Workers started: [<Process name='Process-1' pid=17 parent=16 started>]
+[2023-02-08 17:16:35 +0000] [18] [INFO] Booting worker with pid: 18
+[2023-02-08 17:16:35 +0000] [17] [INFO] [worker] Worker rq:worker:python-worker-plugin-BMS_download_2-0: started, version 1.7.0
+[2023-02-08 17:16:35 +0000] [17] [INFO] [worker] Subscribing to channel rq:pubsub:python-worker-plugin-BMS_download_2-0
+[2023-02-08 17:16:35 +0000] [17] [INFO] [worker] *** Listening on queue-plugin-BMS_download_2...
+[2023-02-08 17:16:35 +0000] [17] [INFO] [scheduler] Trying to acquire locks for queue-plugin-BMS_download_2
+[2023-02-08 17:16:35 +0000] [17] [INFO] [worker] Cleaning registries for queue: queue-plugin-BMS_download_2
+[2023-02-08 17:16:35 +0000] [20] [INFO] [scheduler] Scheduler for queue-plugin-BMS_download_2 started with PID 20
+[2023-02-08 17:16:35 +0000] [21] [INFO] Booting worker with pid: 21
+[2023-02-08 17:16:35 +0000] [22] [INFO] Booting worker with pid: 22
+[2023-02-08 17:16:35 +0000] [23] [INFO] Booting worker with pid: 23
+[2023-02-08 17:16:54 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+Started task worker processes: [<Process name='Process-1' pid=17 parent=16 started>]
+plugin	[08/Feb/2023:17:16:54 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.002252	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:16:54 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000394	"-"	"python-requests/2.27.1"
+[2023-02-08 17:16:54 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:16:54 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000514	"-"	"python-requests/2.27.1"
+Started task worker processes: [<Process name='Process-1' pid=17 parent=16 started>]
+plugin	[08/Feb/2023:17:16:54 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.001661	"-"	"python-requests/2.27.1"
+Started task worker processes: [<Process name='Process-1' pid=17 parent=16 started>]
+plugin	[08/Feb/2023:17:16:57 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.001740	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:16:57 +0000]	172.18.0.15	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000458	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:05 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:05 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000957	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:05 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000381	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:05 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:05 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000486	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:05 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000307	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:17 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+Started task worker processes: [<Process name='Process-1' pid=17 parent=16 started>]
+plugin	[08/Feb/2023:17:17:17 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.002195	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:17 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000387	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:17 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:17 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000514	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:17 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000335	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:17 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000464	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:17 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000626	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:20 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000475	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:20 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:20 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000703	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:20 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000350	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:20 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:20 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000491	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:20 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000312	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:20 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000465	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:23 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:23 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000792	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:23 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000382	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:23 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:23 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000487	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:23 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000314	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:23 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000331	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:23 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000645	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:27 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000534	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:27 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:27 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000697	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:27 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000348	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:27 +0000] [22] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:27 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000496	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:27 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000337	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:27 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000489	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:29 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000538	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:29 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:29 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000645	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:29 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000321	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:29 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:29 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000485	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:29 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000323	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:29 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000559	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:31 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000526	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:31 +0000] [18] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:31 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000913	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:31 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000335	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:31 +0000] [18] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:31 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000479	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:31 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000344	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:32 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000487	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:32 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000492	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:32 +0000] [18] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:32 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000643	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:32 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000327	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:32 +0000] [18] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:32 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000451	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:32 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000333	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:32 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000510	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:45 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000499	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:45 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:45 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000671	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:45 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000321	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:45 +0000] [18] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:45 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000634	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:45 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000377	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:45 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000533	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:52 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000486	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:52 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:52 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000582	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:52 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000330	"-"	"python-requests/2.27.1"
+[2023-02-08 17:17:52 +0000] [21] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:17:52 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000492	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:52 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000305	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:17:52 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000375	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:20:43 +0000]	172.18.0.18	-	-	"GET /global-options-schema HTTP/1.1"	200	77	0.000515	"-"	"python-requests/2.27.1"
+[2023-02-08 17:20:43 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:20:43 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000738	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:20:43 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000424	"-"	"python-requests/2.27.1"
+[2023-02-08 17:20:43 +0000] [23] [INFO] Status requested, answer: {'validated': True, 'warnings': [], 'errors': []}
+plugin	[08/Feb/2023:17:20:43 +0000]	172.18.0.18	-	-	"GET /status HTTP/1.1"	200	45	0.000486	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:20:43 +0000]	172.18.0.18	-	-	"GET /meta-data HTTP/1.1"	200	200	0.000328	"-"	"python-requests/2.27.1"
+plugin	[08/Feb/2023:17:20:43 +0000]	172.18.0.18	-	-	"GET /session-options-schema HTTP/1.1"	200	1478	0.000622	"-"	"python-requests/2.27.1"
+[2023-02-08 17:21:25 +0000] [17] [INFO] [worker] queue-plugin-BMS_download_2: Call a plugin asynchronously via Plugin Center (94a2b704-7fe0-45a4-a36f-718b0b7e60ee)
+[2023-02-08 17:21:25 +0000] [24] [INFO] Validation OK
+[2023-02-08 17:21:25 +0000] [24] [INFO] Registering with Plugin Center with {'data': {'id': 'BMS_download_2', 'type': 'plugin', 'attributes': {'name': 'BMS Downloader 2'}}}.
+[2023-02-08 17:21:25 +0000] [24] [INFO] RESPONSE: 200 {'data': {'attributes': {'name': 'BMS Downloader 2'}, 'id': 'BMS_download_2', 'type': 'plugin'}}
+[2023-02-08 17:21:25 +0000] [24] [INFO] Registration file written
+[2023-02-08 17:21:25 +0000] [24] [INFO] Starting process events. json_data={'session_options_values': {'canonical_type': 'http://ns.bms.com/disqover.ontology/canonical_type/clinical_study', 'federation_pwd': 'adminadmin', 'federation_user': 'admin@ontoforce.com', 'federation_server': 'http://ontoforce-dev.web-dev.bms.com/', 'create_pipeline_bool': False, 'data_source_uri_list': 'all'}, 'events': [{'event_type': 'schedule', 'context_data': {}, 'created_at': '2023-02-08 17:21:25.348562'}]}
+[2023-02-08 17:21:25 +0000] [24] [INFO] using random session_id
+[2023-02-08 17:21:25 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Creating necessary directories for the plugin
+[2023-02-08 17:21:25 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Starting Federation session to download following data sources from CT http://ns.bms.com/disqover.ontology/canonical_type/clinical_study: [all]
+[2023-02-08 17:21:26 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Saving Ontology and Data Source information for http://ns.bms.com/disqover.ontology/canonical_type/clinical_study...
+[2023-02-08 17:21:28 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Saving Configuration information for http://ns.bms.com/disqover.ontology/canonical_type/clinical_study...
+[2023-02-08 17:21:29 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Starting download of 984361 instances...
+[2023-02-08 17:24:18 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 5000/984361 instances complete - [OK]
+[2023-02-08 17:26:07 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 10000/984361 instances complete - [OK]
+[2023-02-08 17:27:24 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 15000/984361 instances complete - [OK]
+[2023-02-08 17:28:41 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 20000/984361 instances complete - [OK]
+[2023-02-08 17:29:59 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 25000/984361 instances complete - [OK]
+[2023-02-08 17:31:13 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 30000/984361 instances complete - [OK]
+[2023-02-08 17:32:28 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 35000/984361 instances complete - [OK]
+[2023-02-08 17:33:42 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 40000/984361 instances complete - [OK]
+[2023-02-08 17:34:56 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 45000/984361 instances complete - [OK]
+[2023-02-08 17:36:20 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 50000/984361 instances complete - [OK]
+[2023-02-08 17:37:37 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 55000/984361 instances complete - [OK]
+[2023-02-08 17:38:53 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 60000/984361 instances complete - [OK]
+[2023-02-08 17:40:21 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 65000/984361 instances complete - [OK]
+[2023-02-08 17:41:40 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 70000/984361 instances complete - [OK]
+[2023-02-08 17:42:59 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 75000/984361 instances complete - [OK]
+[2023-02-08 17:44:25 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 80000/984361 instances complete - [OK]
+[2023-02-08 17:45:46 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 85000/984361 instances complete - [OK]
+[2023-02-08 17:47:09 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 90000/984361 instances complete - [OK]
+[2023-02-08 17:48:29 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 95000/984361 instances complete - [OK]
+[2023-02-08 17:49:48 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 100000/984361 instances complete - [OK]
+[2023-02-08 17:51:05 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 105000/984361 instances complete - [OK]
+[2023-02-08 17:52:24 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 110000/984361 instances complete - [OK]
+[2023-02-08 17:53:52 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 115000/984361 instances complete - [OK]
+[2023-02-08 17:55:16 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 120000/984361 instances complete - [OK]
+[2023-02-08 17:56:39 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 125000/984361 instances complete - [OK]
+[2023-02-08 17:58:04 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 130000/984361 instances complete - [OK]
+[2023-02-08 17:59:22 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 135000/984361 instances complete - [OK]
+[2023-02-08 18:00:40 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 140000/984361 instances complete - [OK]
+[2023-02-08 18:01:57 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 145000/984361 instances complete - [OK]
+[2023-02-08 18:03:15 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 150000/984361 instances complete - [OK]
+[2023-02-08 18:04:30 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 155000/984361 instances complete - [OK]
+[2023-02-08 18:05:48 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 160000/984361 instances complete - [OK]
+[2023-02-08 18:07:04 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 165000/984361 instances complete - [OK]
+[2023-02-08 18:08:24 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 170000/984361 instances complete - [OK]
+[2023-02-08 18:09:42 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 175000/984361 instances complete - [OK]
+[2023-02-08 18:11:00 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 180000/984361 instances complete - [OK]
+[2023-02-08 18:12:17 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 185000/984361 instances complete - [OK]
+[2023-02-08 18:13:31 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 190000/984361 instances complete - [OK]
+[2023-02-08 18:14:45 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 195000/984361 instances complete - [OK]
+[2023-02-08 18:16:01 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 200000/984361 instances complete - [OK]
+[2023-02-08 18:17:16 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 205000/984361 instances complete - [OK]
+[2023-02-08 18:18:29 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 210000/984361 instances complete - [OK]
+[2023-02-08 18:19:44 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 215000/984361 instances complete - [OK]
+[2023-02-08 18:21:00 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 220000/984361 instances complete - [OK]
+[2023-02-08 18:23:12 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 225000/984361 instances complete - [OK]
+[2023-02-08 18:24:30 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 230000/984361 instances complete - [OK]
+[2023-02-08 18:25:50 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 235000/984361 instances complete - [OK]
+[2023-02-08 18:27:06 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 240000/984361 instances complete - [OK]
+[2023-02-08 18:28:24 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 245000/984361 instances complete - [OK]
+[2023-02-08 18:29:39 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 250000/984361 instances complete - [OK]
+[2023-02-08 18:30:55 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 255000/984361 instances complete - [OK]
+[2023-02-08 18:32:10 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 260000/984361 instances complete - [OK]
+[2023-02-08 18:33:26 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 265000/984361 instances complete - [OK]
+[2023-02-08 18:34:46 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 270000/984361 instances complete - [OK]
+[2023-02-08 18:35:59 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 275000/984361 instances complete - [OK]
+[2023-02-08 18:38:41 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 280000/984361 instances complete - [OK]
+[2023-02-08 18:41:09 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 285000/984361 instances complete - [OK]
+[2023-02-08 18:43:06 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 290000/984361 instances complete - [OK]
+[2023-02-08 18:46:15 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 295000/984361 instances complete - [OK]
+[2023-02-08 18:49:46 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 300000/984361 instances complete - [OK]
+[2023-02-08 18:53:08 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 305000/984361 instances complete - [OK]
+[2023-02-08 18:56:02 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 310000/984361 instances complete - [OK]
+[2023-02-08 18:58:10 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 315000/984361 instances complete - [OK]
+[2023-02-08 19:01:30 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 320000/984361 instances complete - [OK]
+[2023-02-08 19:04:16 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 325000/984361 instances complete - [OK]
+[2023-02-08 19:15:15 +0000] [24] [INFO] 3f3e76ec-5699-42cc-9a59-57dd8de27e25 Download of 330000/984361 instances complete - [OK]
+!! A server error has occurred
+!! REQUEST:
+!!  - POST http://ontoforce-dev.web-dev.bms.com/api/instances
+!!  - payload:
+!!      {
+!!        "limit": 5000,
+!!        "offset": 330000,
+!!        "properties": null,
+!!        "jf": {
+!!          "op": "root",
+!!          "filter": {
+!!            "op": "equals",
+!!            "facet": "type",
+!!            "value": "cfv:http://ns.bms.com/disqover.ontology/canonical_type/clinical_study",
+!!            "not": false
+!!          }
+!!        },
+!!        "data_location": null,
+!!        "with_count": "1"
+!!      }
+!!  - headers:
+!!     CONTENT-TYPE = application/json; charset=utf-8
+!!     CONNECTION = keep-alive
+!!     ACCEPT = application/json
+!!     ACCEPT-CHARSET = utf-8
+!!     X-CSRF-TOKEN = dZHQq0MEB5loghIiMeZHQasizWAa
+!!
+!! RESPONSE: (status=503)
+!!  - headers:
+!!     CONTENT-LENGTH = 0
+!!     CONNECTION = keep-alive
+!!  - data:
+!!     b''
+[2023-02-08 19:15:15 +0000] [24] [ERROR] An error occurred in callbacks.process_events: 503 Server Error: Service Unavailable: Back-end server is at capacity for url: http://ontoforce-dev.web-dev.bms.com/api/instances
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  > Traceback (most recent call last):
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "src/api/disqover_plugins/common.py", line 63, in call_callback
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "/plugin/plugin/callbacks.py", line 686, in process_events
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >     download_and_save_instances(api, query, offset, page_size, property_lookup_dict, data_source_lookup_dict, data_dir)
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "/plugin/plugin/callbacks.py", line 107, in download_and_save_instances
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >     instances = api.get_instances(query=query, include_all_properties=True).get_page(offset,page_size=page_size)
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "src/common/object.py", line 179, in get_page
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "src/data_query/models/query_instances.py", line 59, in _get_page_impl
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "src/data_query/models/query_instances.py", line 96, in _query_properties
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "src/disqover_session.py", line 123, in post
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "src/disqover_session.py", line 166, in _request
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >   File "/opt/disqover_env/lib/python3.9/site-packages/requests/models.py", line 960, in raise_for_status
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  >     raise HTTPError(http_error_msg, response=self)
+[2023-02-08 19:15:15 +0000] [24] [ERROR]  > requests.exceptions.HTTPError: 503 Server Error: Service Unavailable: Back-end server is at capacity for url: http://ontoforce-dev.web-dev.bms.com/api/instances
+[2023-02-08 19:42:15 +0000] [17] [INFO] [worker] Cleaning registries for queue: queue-plugin-BMS_download_2
+[2023-02-08 20:09:15 +0000] [17] [INFO] [worker] Cleaning registries for queue: queue-plugin-BMS_download_2
