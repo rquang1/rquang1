@@ -1,0 +1,17 @@
+
+<http://ns.bms.com/protocol/CA184-460> a <http://ns.ontoforce.com/ontologies/uncategorized/classes/protocol>;
+  disq:preferredLabel "CA184-460";
+  <http://ns.ontoforce.com/ontologies/uncategorized/protocolChildOf> "<http://ns.bms.com/protocol/CA184>",
+    "<http://ns.bms.com/protocol/CA>";
+  <http://ns.ontoforce.com/ontologies/uncategorized/protocolParent> <http://ns.bms.com/protocol/CA184>;
+  <http://ns.ontoforce.com/ontologies/uncategorized/protocolPath> "2|CA|http://ns.bms.com/protocol/CA|1|CA184 IPILIMUMAB|http://ns.bms.com/protocol/CA184|0|CA184-460|http://ns.bms.com/protocol/CA184-460" .
+
+<http://ns.bms.com/protocol/CA184-379> a <http://ns.ontoforce.com/ontologies/uncategorized/classes/protocol>;
+  disq:preferredLabel "CA184-379";
+  <http://ns.ontoforce.com/ontologies/uncategorized/protocolChildOf> "<http://ns.bms.com/protocol/CA184>",
+    "<http://ns.bms.com/protocol/CA>";
+  <http://ns.ontoforce.com/ontologies/uncategorized/protocolParent> <http://ns.bms.com/protocol/CA184>;
+  <http://ns.ontoforce.com/ontologies/uncategorized/protocolPath> "2|CA|http://ns.bms.com/protocol/CA|1|CA184 IPILIMUMAB|http://ns.bms.com/protocol/CA184|0|CA184-379|http://ns.bms.com/protocol/CA184-379" .
+
+
+
