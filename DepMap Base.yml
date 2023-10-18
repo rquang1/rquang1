@@ -1,0 +1,2420 @@
+components:
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 12baa5a6-301c-4e94-b337-777890e92272
+      alignment: depmap_proteomics
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 12baa5a6-301c-4e94-b337-777890e92272
+    name: null
+    predecessors:
+      - ab5d60a5-df5e-43ec-905d-6abe4abcf8c9
+    position:
+      x: -30
+      'y': 300
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 1863a08c-e2ab-4252-88c3-81bc58cffe8f
+      alignment: depmap_damaging_mutations
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 1863a08c-e2ab-4252-88c3-81bc58cffe8f
+    name: null
+    predecessors:
+      - e3336a75-ed36-4803-9d90-28f169f002e9
+    position:
+      x: -30
+      'y': -20
+  - actionOptions:
+      action: create_canonical_type
+      action_guid: 1a3999f6-a9cc-43ea-af21-8223f50e7032
+      allow_mixing: true
+      classes:
+        - depmap_proteomics
+      defaultHidden: false
+      description: null
+      disabled: false
+      facets: []
+      has_semantic_hit: true
+      icon: font-awesome fa-dumbbell
+      in_house: true
+      iris_data_collection_name: depmap_proteomics
+      iris_visible_for_groups: null
+      label: DepMap Proteomics
+      label_renderer: http://ns.ontoforce.com/2013/disqover#string
+      properties:
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/cell_line
+          facet_viewType: null
+          label: Cell Line
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/cell_line
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/gene_name
+          facet_viewType: null
+          label: Gene Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - gene_name.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/gene_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: float
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/value
+          facet_viewType: null
+          label: Value
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - value.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/value
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/cell_line_name
+          facet_viewType: null
+          label: Cell Line Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line_display_name.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/cell_line_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/mondo_disease_id
+          facet_viewType: null
+          label: Mondo Disease ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - mondo_id.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/mondo_disease_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/lineage_1
+          facet_viewType: null
+          label: Lineage 1
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_1.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/lineage_1
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/lineage_2
+          facet_viewType: null
+          label: Lineage 2
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_2.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/lineage_2
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/lineage_3
+          facet_viewType: null
+          label: Lineage 3
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_3.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/lineage_3
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/lineage_4
+          facet_viewType: null
+          label: Lineage 4
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_4.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/lineage_4
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/lineage_5
+          facet_viewType: null
+          label: Lineage 5
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_5.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/lineage_5
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/lineage_6
+          facet_viewType: null
+          label: Lineage 6
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_6.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/lineage_6
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_proteomics/uniprot_accession
+          facet_viewType: null
+          label: Uniprot Accession
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - uniprot_acsn.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_proteomics/uniprot_accession
+          visible_for_groups: null
+      publish_to_iris: true
+      purely_remote: false
+      synonym_as_property: true
+      types: []
+      uri: http://ns.disqover.com/ct/dep_map_proteomics
+      visible_for_groups: null
+      warning_empty_alignment_min_count: 1
+      warning_unsafe_renderer_min_count: 1
+    componentType: create_canonical_type
+    description: null
+    guid: 1a3999f6-a9cc-43ea-af21-8223f50e7032
+    name: DepMap Proteomics
+    predecessors:
+      - 1f608224-b65f-48b1-893f-3f62e06eaa22
+    position:
+      x: 610
+      'y': 250
+  - actionOptions:
+      action: match_object_label
+      action_guid: 1f608224-b65f-48b1-893f-3f62e06eaa22
+      case_sensitive: false
+      data_sources: null
+      destination_alignment: depmap_proteomics
+      destination_filter: null
+      destination_match_predicate: new_label.lit
+      destination_predicate: depmap_screen:has_proteomics
+      qc_fraction_dest_matched: null
+      remove_dashes_and_spaces: false
+      source_alignment: depmap_crispr_23q2score
+      source_filter: null
+      source_predicate: new_label.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: match_object_label
+    description: null
+    guid: 1f608224-b65f-48b1-893f-3f62e06eaa22
+    name: Relate DepMap Proteomics to Screen
+    predecessors:
+      - 96d39548-d589-474e-85e7-66f6521125b5
+      - af0b47ef-f989-4b78-9d15-9559f929921b
+    position:
+      x: 280
+      'y': 190
+  - actionOptions:
+      action: match_object_label
+      action_guid: 272049b9-a349-45de-9138-a8b95abaeb34
+      case_sensitive: false
+      data_sources: null
+      destination_alignment: depmap_damaging_mutations
+      destination_filter: null
+      destination_match_predicate: new_label.lit
+      destination_predicate: depmap_screen:has_mutations
+      qc_fraction_dest_matched: null
+      remove_dashes_and_spaces: false
+      source_alignment: depmap_crispr_23q2score
+      source_filter: null
+      source_predicate: new_label.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: match_object_label
+    description: null
+    guid: 272049b9-a349-45de-9138-a8b95abaeb34
+    name: Relate Mutations to Screen
+    predecessors:
+      - 40dd6a93-0172-444f-9313-4ae2983ecfa4
+      - af0b47ef-f989-4b78-9d15-9559f929921b
+    position:
+      x: 280
+      'y': 20
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 3515f0a2-de33-408a-97b6-146e5c4c90ca
+      alignment: depmap_damaging_mutations
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: new_label.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 3515f0a2-de33-408a-97b6-146e5c4c90ca
+    name: null
+    predecessors:
+      - e3336a75-ed36-4803-9d90-28f169f002e9
+    position:
+      x: -30
+      'y': -100
+  - actionOptions:
+      action: create_canonical_type
+      action_guid: 37d3bdc8-e1ed-4e2a-b031-0ee11bb30d93
+      allow_mixing: true
+      classes:
+        - depmap_crispr_23q2score
+      defaultHidden: false
+      description: null
+      disabled: false
+      facets: []
+      has_semantic_hit: true
+      icon: font-awesome fa-eye-dropper
+      in_house: true
+      iris_data_collection_name: depmap_crisprscreen_23q2
+      iris_visible_for_groups: null
+      label: DepMap CRISPR Screen
+      label_renderer: http://ns.ontoforce.com/2013/disqover#string
+      properties:
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/cell_line
+          facet_viewType: null
+          label: Cell Line
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/cell_line
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/gene_name
+          facet_viewType: null
+          label: Gene Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - variable.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/gene_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: float
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/value
+          facet_viewType: null
+          label: Value
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - value.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/value
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/cell_line_name
+          facet_viewType: null
+          label: Cell Line Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line_display_name.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/cell_line_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/mondo_disease_id
+          facet_viewType: null
+          label: Mondo Disease ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - mondo_id.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_crispr_screen/mondo_disease_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/lineage_1
+          facet_viewType: null
+          label: Lineage 1
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_1.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/lineage_1
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/lineage_2
+          facet_viewType: null
+          label: Lineage 2
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_2.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/lineage_2
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/lineage_3
+          facet_viewType: null
+          label: Lineage 3
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_3.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/lineage_3
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/lineage_4
+          facet_viewType: null
+          label: Lineage 4
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_4.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/lineage_4
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/lineage_5
+          facet_viewType: null
+          label: Lineage 5
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_5.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/lineage_5
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/lineage_6
+          facet_viewType: null
+          label: Lineage 6
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_6.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_crispr_screen/lineage_6
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: int
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_crispr_screen/number_of_damaging_mutations_in_gene_in_cell_line
+          facet_viewType: null
+          label: Number of Damaging Mutations in Gene in Cell Line
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - number_of_damaging_mutations.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_crispr_screen/number_of_damaging_mutations_in_gene_in_cell_line
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/uniprot_accession
+          facet_viewType: null
+          label: Uniprot Accession
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - uniprot_acsn.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_crispr_screen/uniprot_accession
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: float
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_crispr_screen/proteomics_value
+          facet_viewType: null
+          label: Proteomics Value
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - proteomics_value.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_crispr_screen/proteomics_value
+          visible_for_groups: null
+      publish_to_iris: true
+      purely_remote: false
+      synonym_as_property: true
+      types: []
+      uri: http://ns.disqover.com/ct/dep_map_crispr_screen
+      visible_for_groups: null
+      warning_empty_alignment_min_count: 1
+      warning_unsafe_renderer_min_count: 1
+    componentType: create_canonical_type
+    description: null
+    guid: 37d3bdc8-e1ed-4e2a-b031-0ee11bb30d93
+    name: DepMap CRISPR Screen
+    predecessors:
+      - 8503f7f9-f250-49cd-bd7c-da73c37c8819
+      - c7f46e2a-b6e3-42a8-9ae4-685723556068
+    position:
+      x: 590
+      'y': 110
+  - actionOptions:
+      action: no_operation
+      action_guid: 40dd6a93-0172-444f-9313-4ae2983ecfa4
+      alignment: depmap_damaging_mutations
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 40dd6a93-0172-444f-9313-4ae2983ecfa4
+    name: null
+    predecessors:
+      - 1863a08c-e2ab-4252-88c3-81bc58cffe8f
+      - 3515f0a2-de33-408a-97b6-146e5c4c90ca
+    position:
+      x: 120
+      'y': -60
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 41582025-4d9b-465f-ad25-38724321620e
+      alignment: depmap_proteomics
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >
+          set @gene_name = [ListGetFirstElem(StrSplit($$variable.lit, "("))];
+
+          set @uniprot_acsn =
+          [ListGetFirstElem(StrSplit(ListJoin(ListGetTail(StrSplit($$variable.lit,
+          "("),1),"("),")"))];
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 41582025-4d9b-465f-ad25-38724321620e
+    name: null
+    predecessors:
+      - ed00581e-f505-4aab-bc77-aaae92982a36
+    position:
+      x: -330
+      'y': 260
+  - actionOptions:
+      action: create_canonical_type
+      action_guid: 43c1dbe7-b6a2-4da6-ba05-23e95fb18210
+      allow_mixing: true
+      classes:
+        - depmap_drugsensitivity_prism
+      defaultHidden: false
+      description: null
+      disabled: false
+      facets: []
+      has_semantic_hit: true
+      icon: font-awesome fa-prescription-bottle-pill
+      in_house: true
+      iris_data_collection_name: depmap_drugsensitivity_prism
+      iris_visible_for_groups: null
+      label: DepMap Drug Sensitivity (Prism)
+      label_renderer: http://ns.ontoforce.com/2013/disqover#string
+      properties:
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/cell_line
+          facet_viewType: null
+          label: Cell Line
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/cell_line
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/variable
+          facet_viewType: null
+          label: Variable
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - variable.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/variable
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: float
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/value
+          facet_viewType: null
+          label: Value
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - value.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/value
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/substance
+          facet_viewType: null
+          label: Substance
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - substance.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/substance
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/substance_id
+          facet_viewType: null
+          label: Substance ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - substance_id_new.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/substance_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/cell_line_name
+          facet_viewType: null
+          label: Cell Line Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line_display_name.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/cell_line_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/mondo_disease_id
+          facet_viewType: null
+          label: Mondo Disease ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - mondo_id.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/mondo_disease_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/lineage_1
+          facet_viewType: null
+          label: Lineage 1
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_1.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/lineage_1
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/lineage_2
+          facet_viewType: null
+          label: Lineage 2
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_2.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/lineage_2
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/lineage_3
+          facet_viewType: null
+          label: Lineage 3
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_3.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/lineage_3
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/lineage_4
+          facet_viewType: null
+          label: Lineage 4
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_4.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/lineage_4
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/lineage_5
+          facet_viewType: null
+          label: Lineage 5
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_5.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/lineage_5
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_drug_sensitivity___prism/lineage_6
+          facet_viewType: null
+          label: Lineage 6
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_6.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_drug_sensitivity___prism/lineage_6
+          visible_for_groups: null
+      publish_to_iris: true
+      purely_remote: false
+      synonym_as_property: true
+      types: []
+      uri: http://ns.disqover.com/ct/dep_map_drug_sensitivity___prism
+      visible_for_groups: null
+      warning_empty_alignment_min_count: 1
+      warning_unsafe_renderer_min_count: 1
+    componentType: create_canonical_type
+    description: null
+    guid: 43c1dbe7-b6a2-4da6-ba05-23e95fb18210
+    name: Drug Sensitivity (Prism)
+    predecessors:
+      - cc8b76d9-1b18-4d07-9ad7-31aa1ec7118a
+    position:
+      x: 590
+      'y': 410
+  - actionOptions:
+      action: csv_importer
+      action_guid: 4c046305-0723-464d-afaa-a9a09804a227
+      alignment: depmap_drugsensitivity_prism
+      columns:
+        - auxiliary: false
+          file_column: cell_line
+          predicate: cell_line
+        - auxiliary: false
+          file_column: variable
+          predicate: variable
+        - auxiliary: false
+          file_column: value
+          predicate: value
+        - auxiliary: false
+          file_column: substance
+          predicate: substance
+        - auxiliary: false
+          file_column: substance_id
+          predicate: substance_id
+        - auxiliary: false
+          file_column: unique_index
+          predicate: unique_index
+        - auxiliary: false
+          file_column: cell_line_display_name
+          predicate: cell_line_display_name
+        - auxiliary: false
+          file_column: lineage_1
+          predicate: lineage_1
+        - auxiliary: false
+          file_column: lineage_2
+          predicate: lineage_2
+        - auxiliary: false
+          file_column: lineage_3
+          predicate: lineage_3
+        - auxiliary: false
+          file_column: lineage_4
+          predicate: lineage_4
+        - auxiliary: false
+          file_column: lineage_5
+          predicate: lineage_5
+        - auxiliary: false
+          file_column: lineage_6
+          predicate: lineage_6
+        - auxiliary: false
+          file_column: mondo_id
+          predicate: mondo_id
+      data_source: http://ns.disqover.com/datasource/dep_map
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/DepMap/depmap_drugsensitivity_prism_repurposing_screen.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: 4c046305-0723-464d-afaa-a9a09804a227
+    name: Import Drug Sensitivity Data (Prism)
+    predecessors:
+      - 8594d640-9b29-4296-98c1-df4bf2852924
+    position:
+      x: -480
+      'y': 410
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 562b5f4c-5638-43fb-8f86-f275caf2a2dc
+      alignment: depmap_drugsensitivity_prism
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 562b5f4c-5638-43fb-8f86-f275caf2a2dc
+    name: null
+    predecessors:
+      - e6733479-de3a-43c1-8bb1-519b570c7bb2
+    position:
+      x: -180
+      'y': 450
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 79dfe55d-95ac-4aae-939f-6fd2e972521d
+      alignment: depmap_crispr_23q2score
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: new_label.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 79dfe55d-95ac-4aae-939f-6fd2e972521d
+    name: null
+    predecessors:
+      - d4f0f392-6d64-4c43-9a0a-b91e493026cf
+    position:
+      x: -30
+      'y': 140
+  - actionOptions:
+      action: infer_multiple
+      action_guid: 8503f7f9-f250-49cd-bd7c-da73c37c8819
+      alignment1: depmap_crispr_23q2score
+      alignment2: depmap_damaging_mutations
+      data_sources: null
+      filter1: null
+      filter2: null
+      predicate1: depmap_screen:has_mutations.fwd
+      predicate_info_list:
+        - alignment3: ''
+          destination_predicate: number_of_damaging_mutations
+          predicate2: value.lit
+      qc_fraction_matched: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: infer_multiple
+    description: null
+    guid: 8503f7f9-f250-49cd-bd7c-da73c37c8819
+    name: Infer Number of Damaging Mutations to Screen
+    predecessors:
+      - 272049b9-a349-45de-9138-a8b95abaeb34
+    position:
+      x: 430
+      'y': 60
+  - actionOptions:
+      action: create_datasource
+      action_guid: 8594d640-9b29-4296-98c1-df4bf2852924
+      date_modified: null
+      description: null
+      homepage: null
+      info_file_path: null
+      label: DepMap
+      short_label: null
+      uri: http://ns.disqover.com/datasource/dep_map
+      uri_scheme: null
+      uri_scheme_example: null
+      visible_for_groups: null
+      warning_absolute_paths_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_info_file_min_count: 1
+    componentType: create_datasource
+    description: null
+    guid: 8594d640-9b29-4296-98c1-df4bf2852924
+    name: DepMap
+    predecessors: []
+    position:
+      x: -650
+      'y': 180
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 8c869a3e-3a5a-467a-a6bc-94534ec85c00
+      alignment: depmap_drugsensitivity_prism
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: unique_index.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 8c869a3e-3a5a-467a-a6bc-94534ec85c00
+    name: null
+    predecessors:
+      - e6733479-de3a-43c1-8bb1-519b570c7bb2
+    position:
+      x: -180
+      'y': 370
+  - actionOptions:
+      action: indexing
+      action_guid: 93a1fd59-20d5-44fa-b034-2f4d88394a47
+      drop_predicates: false
+      warning_empty_alignment_min_count: 1
+    componentType: indexing
+    description: null
+    guid: 93a1fd59-20d5-44fa-b034-2f4d88394a47
+    name: null
+    predecessors:
+      - 1a3999f6-a9cc-43ea-af21-8223f50e7032
+      - 37d3bdc8-e1ed-4e2a-b031-0ee11bb30d93
+      - 43c1dbe7-b6a2-4da6-ba05-23e95fb18210
+      - cb1f3b79-9648-4153-a99e-79e7cd15887d
+    position:
+      x: 760
+      'y': 150
+  - actionOptions:
+      action: no_operation
+      action_guid: 96d39548-d589-474e-85e7-66f6521125b5
+      alignment: depmap_proteomics
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 96d39548-d589-474e-85e7-66f6521125b5
+    name: null
+    predecessors:
+      - 12baa5a6-301c-4e94-b337-777890e92272
+      - fa44a428-3baf-4e22-a50c-43da1a2e2c29
+    position:
+      x: 120
+      'y': 260
+  - actionOptions:
+      action: csv_importer
+      action_guid: a91319be-1480-490a-9316-a9f768e7b027
+      alignment: depmap_damaging_mutations
+      columns:
+        - auxiliary: false
+          file_column: cell_line
+          predicate: cell_line
+        - auxiliary: false
+          file_column: variable
+          predicate: variable
+        - auxiliary: false
+          file_column: value
+          predicate: value
+        - auxiliary: false
+          file_column: unique_index
+          predicate: unique_index
+        - auxiliary: false
+          file_column: cell_line_display_name
+          predicate: cell_line_display_name
+        - auxiliary: false
+          file_column: lineage_1
+          predicate: lineage_1
+        - auxiliary: false
+          file_column: lineage_2
+          predicate: lineage_2
+        - auxiliary: false
+          file_column: lineage_3
+          predicate: lineage_3
+        - auxiliary: false
+          file_column: lineage_4
+          predicate: lineage_4
+        - auxiliary: false
+          file_column: lineage_5
+          predicate: lineage_5
+        - auxiliary: false
+          file_column: lineage_6
+          predicate: lineage_6
+        - auxiliary: false
+          file_column: mondo_id
+          predicate: mondo_id
+      data_source: http://ns.disqover.com/datasource/dep_map
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/DepMap/depmap_damaging_mutations.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: a91319be-1480-490a-9316-a9f768e7b027
+    name: Import DepMap Damaging Mutations
+    predecessors:
+      - 8594d640-9b29-4296-98c1-df4bf2852924
+    position:
+      x: -480
+      'y': -60
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: ab5d60a5-df5e-43ec-905d-6abe4abcf8c9
+      alignment: depmap_proteomics
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: set @new_label = [$$cell_line.lit + "::" + $$gene_name.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: ab5d60a5-df5e-43ec-905d-6abe4abcf8c9
+    name: null
+    predecessors:
+      - 41582025-4d9b-465f-ad25-38724321620e
+    position:
+      x: -180
+      'y': 260
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: ae1732ac-42ae-4f4c-9543-9069f4f913d6
+      alignment: depmap_crispr_23q2score
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: ae1732ac-42ae-4f4c-9543-9069f4f913d6
+    name: null
+    predecessors:
+      - d4f0f392-6d64-4c43-9a0a-b91e493026cf
+    position:
+      x: -30
+      'y': 60
+  - actionOptions:
+      action: no_operation
+      action_guid: af0b47ef-f989-4b78-9d15-9559f929921b
+      alignment: depmap_crispr_23q2score
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: af0b47ef-f989-4b78-9d15-9559f929921b
+    name: null
+    predecessors:
+      - 79dfe55d-95ac-4aae-939f-6fd2e972521d
+      - ae1732ac-42ae-4f4c-9543-9069f4f913d6
+    position:
+      x: 120
+      'y': 100
+  - actionOptions:
+      action: infer_multiple
+      action_guid: c7f46e2a-b6e3-42a8-9ae4-685723556068
+      alignment1: depmap_crispr_23q2score
+      alignment2: depmap_proteomics
+      data_sources: null
+      filter1: null
+      filter2: null
+      predicate1: depmap_screen:has_proteomics.fwd
+      predicate_info_list:
+        - alignment3: ''
+          destination_predicate: ''
+          predicate2: uniprot_acsn.lit
+        - alignment3: ''
+          destination_predicate: proteomics_value
+          predicate2: value.lit
+      qc_fraction_matched: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: infer_multiple
+    description: null
+    guid: c7f46e2a-b6e3-42a8-9ae4-685723556068
+    name: Infer Proteomics Properties to Screen
+    predecessors:
+      - 1f608224-b65f-48b1-893f-3f62e06eaa22
+    position:
+      x: 430
+      'y': 150
+  - actionOptions:
+      action: create_canonical_type
+      action_guid: cb1f3b79-9648-4153-a99e-79e7cd15887d
+      allow_mixing: true
+      classes:
+        - depmap_damaging_mutations
+      defaultHidden: false
+      description: null
+      disabled: false
+      facets: []
+      has_semantic_hit: true
+      icon: font-awesome fa-bolt-lightning
+      in_house: true
+      iris_data_collection_name: depmap_damaging_mutations
+      iris_visible_for_groups: null
+      label: DepMap Damaging Mutations
+      label_renderer: http://ns.ontoforce.com/2013/disqover#string
+      properties:
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/cell_line
+          facet_viewType: null
+          label: Cell Line
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/cell_line
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/gene_name
+          facet_viewType: null
+          label: Gene Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - variable.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/gene_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: int
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_damaging_mutations/number_of_damaging_mutations
+          facet_viewType: null
+          label: Number of Damaging Mutations
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - value.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_damaging_mutations/number_of_damaging_mutations
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_damaging_mutations/cell_line_name
+          facet_viewType: null
+          label: Cell Line Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_line_display_name.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_damaging_mutations/cell_line_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/dep_map_damaging_mutations/mondo_disease_id
+          facet_viewType: null
+          label: Mondo Disease ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - mondo_id.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/dep_map_damaging_mutations/mondo_disease_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/lineage_1
+          facet_viewType: null
+          label: Lineage 1
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_1.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/lineage_1
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/lineage_2
+          facet_viewType: null
+          label: Lineage 2
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_2.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/lineage_2
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/lineage_4
+          facet_viewType: null
+          label: Lineage 4
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_4.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/lineage_4
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/lineage_5
+          facet_viewType: null
+          label: Lineage 5
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_5.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/lineage_5
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/lineage_6
+          facet_viewType: null
+          label: Lineage 6
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_6.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/lineage_6
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/dep_map_damaging_mutations/lineage_3
+          facet_viewType: null
+          label: Lineage 3
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - lineage_3.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/dep_map_damaging_mutations/lineage_3
+          visible_for_groups: null
+      publish_to_iris: true
+      purely_remote: false
+      synonym_as_property: true
+      types: []
+      uri: http://ns.disqover.com/ct/dep_map_damaging_mutations
+      visible_for_groups: null
+      warning_empty_alignment_min_count: 1
+      warning_unsafe_renderer_min_count: 1
+    componentType: create_canonical_type
+    description: null
+    guid: cb1f3b79-9648-4153-a99e-79e7cd15887d
+    name: DepMap Damaging Mutations
+    predecessors:
+      - 272049b9-a349-45de-9138-a8b95abaeb34
+    position:
+      x: 590
+      'y': -30
+  - actionOptions:
+      action: no_operation
+      action_guid: cc8b76d9-1b18-4d07-9ad7-31aa1ec7118a
+      alignment: depmap_drugsensitivity_prism
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: cc8b76d9-1b18-4d07-9ad7-31aa1ec7118a
+    name: null
+    predecessors:
+      - 562b5f4c-5638-43fb-8f86-f275caf2a2dc
+      - 8c869a3e-3a5a-467a-a6bc-94534ec85c00
+    position:
+      x: -30
+      'y': 410
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: d4f0f392-6d64-4c43-9a0a-b91e493026cf
+      alignment: depmap_crispr_23q2score
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: set @new_label = [$$cell_line.lit + "::" + $$variable.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: d4f0f392-6d64-4c43-9a0a-b91e493026cf
+    name: null
+    predecessors:
+      - e79f6438-619d-4130-ac0c-bc0cf946cbab
+    position:
+      x: -180
+      'y': 100
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: e3336a75-ed36-4803-9d90-28f169f002e9
+      alignment: depmap_damaging_mutations
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: set @new_label = [$$cell_line.lit + "::" + $$variable.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: e3336a75-ed36-4803-9d90-28f169f002e9
+    name: null
+    predecessors:
+      - a91319be-1480-490a-9316-a9f768e7b027
+    position:
+      x: -180
+      'y': -60
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: e6733479-de3a-43c1-8bb1-519b570c7bb2
+      alignment: depmap_drugsensitivity_prism
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >-
+          set @substance_id_new =
+          [ListJoin(ListRemoveTail(StrSplit($$substance_id.lit,")"),1),"")]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: e6733479-de3a-43c1-8bb1-519b570c7bb2
+    name: null
+    predecessors:
+      - 4c046305-0723-464d-afaa-a9a09804a227
+    position:
+      x: -330
+      'y': 410
+  - actionOptions:
+      action: csv_importer
+      action_guid: e79f6438-619d-4130-ac0c-bc0cf946cbab
+      alignment: depmap_crispr_23q2score
+      columns:
+        - auxiliary: false
+          file_column: cell_line
+          predicate: cell_line
+        - auxiliary: false
+          file_column: variable
+          predicate: variable
+        - auxiliary: false
+          file_column: value
+          predicate: value
+        - auxiliary: false
+          file_column: unique_index
+          predicate: unique_index
+        - auxiliary: false
+          file_column: cell_line_display_name
+          predicate: cell_line_display_name
+        - auxiliary: false
+          file_column: lineage_1
+          predicate: lineage_1
+        - auxiliary: false
+          file_column: lineage_2
+          predicate: lineage_2
+        - auxiliary: false
+          file_column: lineage_3
+          predicate: lineage_3
+        - auxiliary: false
+          file_column: lineage_4
+          predicate: lineage_4
+        - auxiliary: false
+          file_column: lineage_5
+          predicate: lineage_5
+        - auxiliary: false
+          file_column: lineage_6
+          predicate: lineage_6
+        - auxiliary: false
+          file_column: mondo_id
+          predicate: mondo_id
+      data_source: http://ns.disqover.com/datasource/dep_map
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/DepMap/depmap_crispr_public_23q2score_chronos.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: e79f6438-619d-4130-ac0c-bc0cf946cbab
+    name: Import DepMap Crispr Screen 23q2score
+    predecessors:
+      - 8594d640-9b29-4296-98c1-df4bf2852924
+    position:
+      x: -480
+      'y': 90
+  - actionOptions:
+      action: csv_importer
+      action_guid: ed00581e-f505-4aab-bc77-aaae92982a36
+      alignment: depmap_proteomics
+      columns:
+        - auxiliary: false
+          file_column: cell_line
+          predicate: cell_line
+        - auxiliary: false
+          file_column: variable
+          predicate: variable
+        - auxiliary: false
+          file_column: value
+          predicate: value
+        - auxiliary: false
+          file_column: unique_index
+          predicate: unique_index
+        - auxiliary: false
+          file_column: cell_line_display_name
+          predicate: cell_line_display_name
+        - auxiliary: false
+          file_column: lineage_1
+          predicate: lineage_1
+        - auxiliary: false
+          file_column: lineage_2
+          predicate: lineage_2
+        - auxiliary: false
+          file_column: lineage_3
+          predicate: lineage_3
+        - auxiliary: false
+          file_column: lineage_4
+          predicate: lineage_4
+        - auxiliary: false
+          file_column: lineage_5
+          predicate: lineage_5
+        - auxiliary: false
+          file_column: lineage_6
+          predicate: lineage_6
+        - auxiliary: false
+          file_column: mondo_id
+          predicate: mondo_id
+      data_source: http://ns.disqover.com/datasource/dep_map
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/DepMap/depmap_proteomics_data.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: ed00581e-f505-4aab-bc77-aaae92982a36
+    name: Import DepMap Proteomics
+    predecessors:
+      - 8594d640-9b29-4296-98c1-df4bf2852924
+    position:
+      x: -480
+      'y': 260
+  - actionOptions:
+      action: set_subject_label
+      action_guid: fa44a428-3baf-4e22-a50c-43da1a2e2c29
+      alignment: depmap_proteomics
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: new_label.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: fa44a428-3baf-4e22-a50c-43da1a2e2c29
+    name: null
+    predecessors:
+      - ab5d60a5-df5e-43ec-905d-6abe4abcf8c9
+    position:
+      x: -30
+      'y': 220
+createdAt: '2023-07-06T19:13:43.818113'
+createdBy: natalie.romanov@merckgroup.com
+description: public asset
+id: 35b7a891-f472-43f9-9c77-7006cb977f64
+lastRunInfo:
+  data:
+    attributes:
+      indexed: false
+      runBy: natalie.romanov@merckgroup.com
+      startedAt: '2023-08-13T06:45:29.122998'
+      status: Stopped
+    id: f5be581d-5df4-44f5-95a0-bb0b188b430a
+    type: lastRunInfo
+name: DepMap Base
+segments: []
+type: pipeline
+updatedAt: '2023-08-17T19:13:46.887863'
+uriTemplates:
+  - template: http://ns.disqover.com
+    templateType: namespace
+  - template: ct/${canonical_type_label}
+    templateType: canonical_type
+  - template: facet/${canonical_type_label}/${facet_label}
+    templateType: facet
+  - template: property/${canonical_type_label}/${property_label}
+    templateType: property
+  - template: >-
+      typed_link/${source_canonical_type_label}/${destination_canonical_type_label}
+    templateType: typed_link
+  - template: >-
+      relation_type/${source_canonical_type_label}/${destination_canonical_type_label}/${relation_type_label}
+    templateType: relation_type
+  - template: datasource/${data_source_label}
+    templateType: data_source
+  - template: subinstance/${subinstance_type_label}
+    templateType: subinstance_type
+version: 4

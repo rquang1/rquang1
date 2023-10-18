@@ -1,0 +1,2581 @@
+components:
+  - actionOptions:
+      action: csv_importer
+      action_guid: 020e03af-7ab1-4b55-bebb-64c834254dea
+      alignment: signor_mouse_all_data
+      columns:
+        - auxiliary: false
+          file_column: ENTITYA
+          predicate: entitya
+        - auxiliary: false
+          file_column: TYPEA
+          predicate: typea
+        - auxiliary: false
+          file_column: IDA
+          predicate: ida
+        - auxiliary: false
+          file_column: DATABASEA
+          predicate: databasea
+        - auxiliary: false
+          file_column: ENTITYB
+          predicate: entityb
+        - auxiliary: false
+          file_column: TYPEB
+          predicate: typeb
+        - auxiliary: false
+          file_column: IDB
+          predicate: idb
+        - auxiliary: false
+          file_column: DATABASEB
+          predicate: databaseb
+        - auxiliary: false
+          file_column: EFFECT
+          predicate: effect
+        - auxiliary: false
+          file_column: MECHANISM
+          predicate: mechanism
+        - auxiliary: false
+          file_column: RESIDUE
+          predicate: residue
+        - auxiliary: false
+          file_column: SEQUENCE
+          predicate: sequence
+        - auxiliary: false
+          file_column: TAX_ID
+          predicate: tax_id
+        - auxiliary: false
+          file_column: CELL_DATA
+          predicate: cell_data
+        - auxiliary: false
+          file_column: TISSUE_DATA
+          predicate: tissue_data
+        - auxiliary: false
+          file_column: MODULATOR_COMPLEX
+          predicate: modulator_complex
+        - auxiliary: false
+          file_column: TARGET_COMPLEX
+          predicate: target_complex
+        - auxiliary: false
+          file_column: MODIFICATIONA
+          predicate: modificationa
+        - auxiliary: false
+          file_column: MODASEQ
+          predicate: modaseq
+        - auxiliary: false
+          file_column: MODIFICATIONB
+          predicate: modificationb
+        - auxiliary: false
+          file_column: MODBSEQ
+          predicate: modbseq
+        - auxiliary: false
+          file_column: PMID
+          predicate: pmid
+        - auxiliary: false
+          file_column: DIRECT
+          predicate: direct
+        - auxiliary: false
+          file_column: NOTES
+          predicate: notes
+        - auxiliary: false
+          file_column: ANNOTATOR
+          predicate: annotator
+        - auxiliary: false
+          file_column: SENTENCE
+          predicate: sentence
+        - auxiliary: false
+          file_column: SCORE
+          predicate: score
+        - auxiliary: false
+          file_column: SIGNOR_ID
+          predicate: signor_id
+      data_source: http://ns.disqover.com/datasource/sig_nor
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/SigNOR/all_data_M_musculus_20_09_23.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: 020e03af-7ab1-4b55-bebb-64c834254dea
+    name: Import SigNOR Mouse All Data
+    predecessors:
+      - 22344593-2bbd-480e-9c58-e31f06a276a5
+    position:
+      x: -670
+      'y': -80
+  - actionOptions:
+      action: no_operation
+      action_guid: 0237cee2-6932-4721-9e22-5506ab182662
+      alignment: signor_phospho_mouse
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 0237cee2-6932-4721-9e22-5506ab182662
+    name: null
+    predecessors:
+      - def86c94-3f5c-48b1-9a70-0711bb71b09f
+    position:
+      x: -520
+      'y': 390
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 0a40d358-64a1-4592-87c3-1c8b5d58c432
+      alignment: signor_human_all_data
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >-
+
+          set @interaction = [$$organism.lit + "::" + $$entitya.lit + "::" +
+          $$entityb.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 0a40d358-64a1-4592-87c3-1c8b5d58c432
+    name: null
+    predecessors:
+      - 6d0cd495-ff89-4a4c-a1a4-e9b5276ed97a
+    position:
+      x: -220
+      'y': 240
+  - actionOptions:
+      action: csv_importer
+      action_guid: 0c87ebf6-f553-4aa0-99af-4507c410a8f9
+      alignment: signor_rat_all_data
+      columns:
+        - auxiliary: false
+          file_column: ENTITYA
+          predicate: entitya
+        - auxiliary: false
+          file_column: TYPEA
+          predicate: typea
+        - auxiliary: false
+          file_column: IDA
+          predicate: ida
+        - auxiliary: false
+          file_column: DATABASEA
+          predicate: databasea
+        - auxiliary: false
+          file_column: ENTITYB
+          predicate: entityb
+        - auxiliary: false
+          file_column: TYPEB
+          predicate: typeb
+        - auxiliary: false
+          file_column: IDB
+          predicate: idb
+        - auxiliary: false
+          file_column: DATABASEB
+          predicate: databaseb
+        - auxiliary: false
+          file_column: EFFECT
+          predicate: effect
+        - auxiliary: false
+          file_column: MECHANISM
+          predicate: mechanism
+        - auxiliary: false
+          file_column: RESIDUE
+          predicate: residue
+        - auxiliary: false
+          file_column: SEQUENCE
+          predicate: sequence
+        - auxiliary: false
+          file_column: TAX_ID
+          predicate: tax_id
+        - auxiliary: false
+          file_column: CELL_DATA
+          predicate: cell_data
+        - auxiliary: false
+          file_column: TISSUE_DATA
+          predicate: tissue_data
+        - auxiliary: false
+          file_column: MODULATOR_COMPLEX
+          predicate: modulator_complex
+        - auxiliary: false
+          file_column: TARGET_COMPLEX
+          predicate: target_complex
+        - auxiliary: false
+          file_column: MODIFICATIONA
+          predicate: modificationa
+        - auxiliary: false
+          file_column: MODASEQ
+          predicate: modaseq
+        - auxiliary: false
+          file_column: MODIFICATIONB
+          predicate: modificationb
+        - auxiliary: false
+          file_column: MODBSEQ
+          predicate: modbseq
+        - auxiliary: false
+          file_column: PMID
+          predicate: pmid
+        - auxiliary: false
+          file_column: DIRECT
+          predicate: direct
+        - auxiliary: false
+          file_column: NOTES
+          predicate: notes
+        - auxiliary: false
+          file_column: ANNOTATOR
+          predicate: annotator
+        - auxiliary: false
+          file_column: SENTENCE
+          predicate: sentence
+        - auxiliary: false
+          file_column: SCORE
+          predicate: score
+        - auxiliary: false
+          file_column: SIGNOR_ID
+          predicate: signor_id
+      data_source: http://ns.disqover.com/datasource/sig_nor
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/SigNOR/all_data_R_norvegicus_20_09_23.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: ''''
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: 0c87ebf6-f553-4aa0-99af-4507c410a8f9
+    name: Import SigNOR Rattus All Data
+    predecessors:
+      - 22344593-2bbd-480e-9c58-e31f06a276a5
+    position:
+      x: -670
+      'y': 80
+  - actionOptions:
+      action: merge_alignments
+      action_guid: 0dbffd4b-35f2-429d-bef5-a707b1a132f1
+      auto_merge_instances: merge_if_needed
+      destination_alignment: signor_phospho_human
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: signor_phospho_mouse
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: 0dbffd4b-35f2-429d-bef5-a707b1a132f1
+    name: null
+    predecessors:
+      - 5a902e4d-fd9a-4ba3-be01-24289d393dc2
+      - 77dda0d5-2cbc-4e29-abd1-796a7dba9152
+    position:
+      x: 250
+      'y': 560
+  - actionOptions:
+      action: merge_alignments
+      action_guid: 1c5766b5-0ced-46ae-b2ab-cb053c6ade71
+      auto_merge_instances: merge_if_needed
+      destination_alignment: signor_human_all_data
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: signor_phospho_human
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: 1c5766b5-0ced-46ae-b2ab-cb053c6ade71
+    name: null
+    predecessors:
+      - 0dbffd4b-35f2-429d-bef5-a707b1a132f1
+      - e60bdeef-ccd7-484f-8d63-4c2ef1298a14
+    position:
+      x: 580
+      'y': 320
+  - actionOptions:
+      action: no_operation
+      action_guid: 20924580-a49e-42d1-824b-5de06b54e112
+      alignment: signor_rat_all_data
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 20924580-a49e-42d1-824b-5de06b54e112
+    name: null
+    predecessors:
+      - 0c87ebf6-f553-4aa0-99af-4507c410a8f9
+    position:
+      x: -520
+      'y': 80
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 20a76d76-b980-48e7-83a1-562cec33f17e
+      alignment: signor_phospho_rat
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: interaction.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 20a76d76-b980-48e7-83a1-562cec33f17e
+    name: null
+    predecessors:
+      - 6acbf2e3-ac97-4813-9fff-4694fd4c7e3b
+    position:
+      x: -220
+      'y': 590
+  - actionOptions:
+      action: create_datasource
+      action_guid: 22344593-2bbd-480e-9c58-e31f06a276a5
+      date_modified: null
+      description: null
+      homepage: null
+      info_file_path: null
+      label: SigNOR
+      short_label: null
+      uri: http://ns.disqover.com/datasource/sig_nor
+      uri_scheme: null
+      uri_scheme_example: null
+      visible_for_groups: null
+      warning_absolute_paths_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_info_file_min_count: 1
+    componentType: create_datasource
+    description: null
+    guid: 22344593-2bbd-480e-9c58-e31f06a276a5
+    name: SigNOR
+    predecessors: []
+    position:
+      x: -850
+      'y': 320
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 27cbd7ce-8743-4be3-9868-80f287cae089
+      alignment: signor_phospho_human
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: interaction.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 27cbd7ce-8743-4be3-9868-80f287cae089
+    name: null
+    predecessors:
+      - dfa6543d-dd2c-42fe-b7e4-95e17c6e9702
+    position:
+      x: -220
+      'y': 750
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 484d28a5-6a63-4fd4-b024-179c184acbc7
+      alignment: signor_human_all_data
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: interaction.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 484d28a5-6a63-4fd4-b024-179c184acbc7
+    name: null
+    predecessors:
+      - 0a40d358-64a1-4592-87c3-1c8b5d58c432
+    position:
+      x: -70
+      'y': 280
+  - actionOptions:
+      action: no_operation
+      action_guid: 5a902e4d-fd9a-4ba3-be01-24289d393dc2
+      alignment: signor_phospho_human
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 5a902e4d-fd9a-4ba3-be01-24289d393dc2
+    name: null
+    predecessors:
+      - 27cbd7ce-8743-4be3-9868-80f287cae089
+      - d7abd1b3-01f2-4e06-822a-fb5e9e3a27b2
+    position:
+      x: -70
+      'y': 710
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 5fb5993e-4cda-43fb-9080-5a2c3e278bb7
+      alignment: signor_phospho_mouse
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: interaction.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 5fb5993e-4cda-43fb-9080-5a2c3e278bb7
+    name: null
+    predecessors:
+      - f20301d5-b413-4ed6-a355-232e07125da7
+    position:
+      x: -220
+      'y': 430
+  - actionOptions:
+      action: csv_importer
+      action_guid: 629ee248-27df-4299-bd51-8ca08d0607b1
+      alignment: signor_phospho_rat
+      columns:
+        - auxiliary: false
+          file_column: ENTITYA
+          predicate: entitya
+        - auxiliary: false
+          file_column: TYPEA
+          predicate: typea
+        - auxiliary: false
+          file_column: IDA
+          predicate: ida
+        - auxiliary: false
+          file_column: DATABASEA
+          predicate: databasea
+        - auxiliary: false
+          file_column: ENTITYB
+          predicate: entityb
+        - auxiliary: false
+          file_column: TYPEB
+          predicate: typeb
+        - auxiliary: false
+          file_column: IDB
+          predicate: idb
+        - auxiliary: false
+          file_column: DATABASEB
+          predicate: databaseb
+        - auxiliary: false
+          file_column: EFFECT
+          predicate: effect
+        - auxiliary: false
+          file_column: MECHANISM
+          predicate: mechanism
+        - auxiliary: false
+          file_column: RESIDUE
+          predicate: residue
+        - auxiliary: false
+          file_column: SEQUENCE
+          predicate: sequence
+        - auxiliary: false
+          file_column: TAX_ID
+          predicate: tax_id
+        - auxiliary: false
+          file_column: CELL_DATA
+          predicate: cell_data
+        - auxiliary: false
+          file_column: TISSUE_DATA
+          predicate: tissue_data
+        - auxiliary: false
+          file_column: MODULATOR_COMPLEX
+          predicate: modulator_complex
+        - auxiliary: false
+          file_column: TARGET_COMPLEX
+          predicate: target_complex
+        - auxiliary: false
+          file_column: MODIFICATIONA
+          predicate: modificationa
+        - auxiliary: false
+          file_column: MODASEQ
+          predicate: modaseq
+        - auxiliary: false
+          file_column: MODIFICATIONB
+          predicate: modificationb
+        - auxiliary: false
+          file_column: MODBSEQ
+          predicate: modbseq
+        - auxiliary: false
+          file_column: PMID
+          predicate: pmid
+        - auxiliary: false
+          file_column: DIRECT
+          predicate: direct
+        - auxiliary: false
+          file_column: NOTES
+          predicate: notes
+        - auxiliary: false
+          file_column: ANNOTATOR
+          predicate: annotator
+        - auxiliary: false
+          file_column: SENTENCE
+          predicate: sentence
+        - auxiliary: false
+          file_column: SCORE
+          predicate: score
+        - auxiliary: false
+          file_column: SIGNOR_ID
+          predicate: signor_id
+      data_source: http://ns.disqover.com/datasource/sig_nor
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/SigNOR/M_musculus_phosphorylations_20_09_23.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: ''''
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: 629ee248-27df-4299-bd51-8ca08d0607b1
+    name: Import Signor Rat Phosphorylation Data
+    predecessors:
+      - 22344593-2bbd-480e-9c58-e31f06a276a5
+    position:
+      x: -670
+      'y': 550
+  - actionOptions:
+      action: no_operation
+      action_guid: 665ed484-735e-449b-a44b-da0dd6a7e7df
+      alignment: signor_rat_all_data
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 665ed484-735e-449b-a44b-da0dd6a7e7df
+    name: null
+    predecessors:
+      - df711543-b026-44b7-b6ec-fe34a47e0eba
+      - e6219275-774e-4d8d-a002-05966d4f152e
+    position:
+      x: 90
+      'y': 80
+  - actionOptions:
+      action: no_operation
+      action_guid: 6670269a-891a-4697-a993-3ecf42f6434a
+      alignment: signor_phospho_rat
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 6670269a-891a-4697-a993-3ecf42f6434a
+    name: null
+    predecessors:
+      - 20a76d76-b980-48e7-83a1-562cec33f17e
+      - e97a84a6-daf2-4ce0-ae22-c9f17210ed7f
+    position:
+      x: -70
+      'y': 550
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 6865d3a6-ec35-4756-be7b-70b78d7a2977
+      alignment: signor_human_all_data
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: interaction.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 6865d3a6-ec35-4756-be7b-70b78d7a2977
+    name: null
+    predecessors:
+      - 0a40d358-64a1-4592-87c3-1c8b5d58c432
+    position:
+      x: -70
+      'y': 200
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 6acbf2e3-ac97-4813-9fff-4694fd4c7e3b
+      alignment: signor_phospho_rat
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >-
+          set @interaction = [$$tax_id.lit + "::" + $$entitya.lit + "::" +
+          $$entityb.lit + "::" + $$residue.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 6acbf2e3-ac97-4813-9fff-4694fd4c7e3b
+    name: null
+    predecessors:
+      - ea873b5d-3617-46e9-be93-301f9a080a6b
+    position:
+      x: -370
+      'y': 550
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 6d0cd495-ff89-4a4c-a1a4-e9b5276ed97a
+      alignment: signor_human_all_data
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: set @organism = Map($databasea.lit, _item, "Homo sapiens");
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 6d0cd495-ff89-4a4c-a1a4-e9b5276ed97a
+    name: null
+    predecessors:
+      - 9df3049a-051d-47c0-b21a-7d6d27769606
+    position:
+      x: -370
+      'y': 240
+  - actionOptions:
+      action: merge_alignments
+      action_guid: 77dda0d5-2cbc-4e29-abd1-796a7dba9152
+      auto_merge_instances: merge_if_needed
+      destination_alignment: signor_phospho_mouse
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: signor_phospho_rat
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: 77dda0d5-2cbc-4e29-abd1-796a7dba9152
+    name: null
+    predecessors:
+      - 6670269a-891a-4697-a993-3ecf42f6434a
+      - 782e5583-5053-4f30-91d2-2f7e403c5885
+    position:
+      x: 90
+      'y': 470
+  - actionOptions:
+      action: no_operation
+      action_guid: 782e5583-5053-4f30-91d2-2f7e403c5885
+      alignment: signor_phospho_mouse
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 782e5583-5053-4f30-91d2-2f7e403c5885
+    name: null
+    predecessors:
+      - 5fb5993e-4cda-43fb-9080-5a2c3e278bb7
+      - 9f29e984-a76b-4c25-b754-cc1b740c91a6
+    position:
+      x: -70
+      'y': 390
+  - actionOptions:
+      action: no_operation
+      action_guid: 8f29e3be-32ed-4276-a509-89cd8a67fead
+      alignment: signor_human_all_data
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 8f29e3be-32ed-4276-a509-89cd8a67fead
+    name: null
+    predecessors:
+      - 484d28a5-6a63-4fd4-b024-179c184acbc7
+      - 6865d3a6-ec35-4756-be7b-70b78d7a2977
+    position:
+      x: 90
+      'y': 240
+  - actionOptions:
+      action: no_operation
+      action_guid: 9df3049a-051d-47c0-b21a-7d6d27769606
+      alignment: signor_human_all_data
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 9df3049a-051d-47c0-b21a-7d6d27769606
+    name: null
+    predecessors:
+      - f24be926-4c27-486f-bba8-5784feced698
+    position:
+      x: -520
+      'y': 240
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 9f29e984-a76b-4c25-b754-cc1b740c91a6
+      alignment: signor_phospho_mouse
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: interaction.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 9f29e984-a76b-4c25-b754-cc1b740c91a6
+    name: null
+    predecessors:
+      - f20301d5-b413-4ed6-a355-232e07125da7
+    position:
+      x: -220
+      'y': 350
+  - actionOptions:
+      action: set_subject_label
+      action_guid: a39efefa-639e-4e26-a887-4eb9db3fe604
+      alignment: signor_mouse_all_data
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: interaction.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: a39efefa-639e-4e26-a887-4eb9db3fe604
+    name: null
+    predecessors:
+      - cebdbb75-fcb7-45c8-a723-a975df2ba9f5
+    position:
+      x: -70
+      'y': -40
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: a7a5b1e1-4e06-4102-9932-a6c66afc4720
+      alignment: signor_rat_all_data
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >-
+          set @interaction = [$$organism.lit + "::" + $$entitya.lit + "::" +
+          $$entityb.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: a7a5b1e1-4e06-4102-9932-a6c66afc4720
+    name: null
+    predecessors:
+      - f52c2f54-6b3c-425c-a5c5-a051e4ce8b14
+    position:
+      x: -220
+      'y': 80
+  - actionOptions:
+      action: no_operation
+      action_guid: c08d04c4-2db8-4e42-b3ec-77790358ebd9
+      alignment: signor_mouse_all_data
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: c08d04c4-2db8-4e42-b3ec-77790358ebd9
+    name: null
+    predecessors:
+      - 020e03af-7ab1-4b55-bebb-64c834254dea
+    position:
+      x: -520
+      'y': -80
+  - actionOptions:
+      action: csv_importer
+      action_guid: c55e982f-60d9-47a6-a0f1-fefd26a005c1
+      alignment: signor_phospho_human
+      columns:
+        - auxiliary: false
+          file_column: ENTITYA
+          predicate: entitya
+        - auxiliary: false
+          file_column: TYPEA
+          predicate: typea
+        - auxiliary: false
+          file_column: IDA
+          predicate: ida
+        - auxiliary: false
+          file_column: DATABASEA
+          predicate: databasea
+        - auxiliary: false
+          file_column: ENTITYB
+          predicate: entityb
+        - auxiliary: false
+          file_column: TYPEB
+          predicate: typeb
+        - auxiliary: false
+          file_column: IDB
+          predicate: idb
+        - auxiliary: false
+          file_column: DATABASEB
+          predicate: databaseb
+        - auxiliary: false
+          file_column: EFFECT
+          predicate: effect
+        - auxiliary: false
+          file_column: MECHANISM
+          predicate: mechanism
+        - auxiliary: false
+          file_column: RESIDUE
+          predicate: residue
+        - auxiliary: false
+          file_column: SEQUENCE
+          predicate: sequence
+        - auxiliary: false
+          file_column: TAX_ID
+          predicate: tax_id
+        - auxiliary: false
+          file_column: CELL_DATA
+          predicate: cell_data
+        - auxiliary: false
+          file_column: TISSUE_DATA
+          predicate: tissue_data
+        - auxiliary: false
+          file_column: MODULATOR_COMPLEX
+          predicate: modulator_complex
+        - auxiliary: false
+          file_column: TARGET_COMPLEX
+          predicate: target_complex
+        - auxiliary: false
+          file_column: MODIFICATIONA
+          predicate: modificationa
+        - auxiliary: false
+          file_column: MODASEQ
+          predicate: modaseq
+        - auxiliary: false
+          file_column: MODIFICATIONB
+          predicate: modificationb
+        - auxiliary: false
+          file_column: MODBSEQ
+          predicate: modbseq
+        - auxiliary: false
+          file_column: PMID
+          predicate: pmid
+        - auxiliary: false
+          file_column: DIRECT
+          predicate: direct
+        - auxiliary: false
+          file_column: NOTES
+          predicate: notes
+        - auxiliary: false
+          file_column: ANNOTATOR
+          predicate: annotator
+        - auxiliary: false
+          file_column: SENTENCE
+          predicate: sentence
+        - auxiliary: false
+          file_column: SCORE
+          predicate: score
+        - auxiliary: false
+          file_column: SIGNOR_ID
+          predicate: signor_id
+      data_source: http://ns.disqover.com/datasource/sig_nor
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/SigNOR/human_phosphorylations_20_09_23.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: c55e982f-60d9-47a6-a0f1-fefd26a005c1
+    name: Import Signor Human Phosphorylation Data
+    predecessors:
+      - 22344593-2bbd-480e-9c58-e31f06a276a5
+    position:
+      x: -670
+      'y': 710
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: cebdbb75-fcb7-45c8-a723-a975df2ba9f5
+      alignment: signor_mouse_all_data
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >-
+          set @interaction = [$$organism.lit + "::" + $$entitya.lit + "::" +
+          $$entityb.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: cebdbb75-fcb7-45c8-a723-a975df2ba9f5
+    name: null
+    predecessors:
+      - e30e07a6-18e3-4e3f-989b-86534f52e19d
+    position:
+      x: -220
+      'y': -80
+  - actionOptions:
+      action: no_operation
+      action_guid: d224166b-7647-4d94-bbba-4f3377139ff7
+      alignment: signor_mouse_all_data
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: d224166b-7647-4d94-bbba-4f3377139ff7
+    name: null
+    predecessors:
+      - a39efefa-639e-4e26-a887-4eb9db3fe604
+      - f91a7160-d88f-406a-9f59-b27f30dfadfa
+    position:
+      x: 90
+      'y': -80
+  - actionOptions:
+      action: create_canonical_type
+      action_guid: d6e7a76d-e958-4dae-be7d-2422672a0a16
+      allow_mixing: true
+      classes:
+        - signor_human_all_data
+      defaultHidden: false
+      description: null
+      disabled: false
+      facets: []
+      has_semantic_hit: true
+      icon: font-awesome fa-solid fa-link
+      in_house: true
+      iris_data_collection_name: signor_all_data
+      iris_visible_for_groups: null
+      label: SigNOR Data
+      label_renderer: http://ns.ontoforce.com/2013/disqover#string
+      properties:
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/gene_name_a
+          facet_viewType: null
+          label: Gene Name A
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - entitya.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/gene_name_a
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/gene_name_b
+          facet_viewType: null
+          label: Gene Name B
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - entityb.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/gene_name_b
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/type_a
+          facet_viewType: null
+          label: Type A
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - typea.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/type_a
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/type_b
+          facet_viewType: null
+          label: Type B
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - typeb.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/type_b
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/uniprot_a
+          facet_viewType: null
+          label: Uniprot A
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - ida.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/uniprot_a
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/uniprot_b
+          facet_viewType: null
+          label: Uniprot B
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - idb.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/uniprot_b
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/database_a
+          facet_viewType: null
+          label: Database A
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - databasea.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/database_a
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/database_b
+          facet_viewType: null
+          label: Database B
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - databaseb.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/database_b
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/effect
+          facet_viewType: null
+          label: Effect
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - effect.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/effect
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/mechanism
+          facet_viewType: null
+          label: Mechanism
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - mechanism.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/mechanism
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/residue
+          facet_viewType: null
+          label: Residue
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - residue.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/residue
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/sequence
+          facet_viewType: null
+          label: Sequence
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - sequence.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/sequence
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/tax_id
+          facet_viewType: null
+          label: Tax ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - tax_id.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/tax_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/cell_data
+          facet_viewType: null
+          label: Cell Data
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - cell_data.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/cell_data
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/tissue_data
+          facet_viewType: null
+          label: Tissue Data
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - tissue_data.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/tissue_data
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/modulator_complex
+          facet_viewType: null
+          label: Modulator Complex
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - modulator_complex.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/modulator_complex
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/target_complex
+          facet_viewType: null
+          label: Target Complex
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - target_complex.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/target_complex
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/modification_a
+          facet_viewType: null
+          label: Modification A
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - modificationa.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/modification_a
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/modification_b
+          facet_viewType: null
+          label: Modification B
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - modificationb.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/modification_b
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/modification_sequence
+          facet_viewType: null
+          label: Modification Sequence
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - modaseq.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/modification_sequence
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/modb_seq
+          facet_viewType: null
+          label: ModbSeq
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - modbseq.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/modb_seq
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/pubmed_id
+          facet_viewType: null
+          label: Pubmed ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - pmid.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/pubmed_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/direct_or_indirect
+          facet_viewType: null
+          label: Direct or Indirect?
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - direct.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/direct_or_indirect
+          visible_for_groups: null
+        - create_facet: false
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: null
+          facet_viewType: null
+          label: Notes
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - notes.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/notes
+          visible_for_groups: null
+        - create_facet: false
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: null
+          facet_viewType: null
+          label: Sentence
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - sentence.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/sentence
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/annotator
+          facet_viewType: null
+          label: Annotator
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - annotator.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/annotator
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: float
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/score
+          facet_viewType: null
+          label: Score
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - score.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/score
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/signor_id
+          facet_viewType: null
+          label: Signor ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - signor_id.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/signor_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/sig_nor_data/residue
+          facet_viewType: null
+          label: Residue
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - residue.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/sig_nor_data/residue
+          visible_for_groups: null
+      publish_to_iris: true
+      purely_remote: false
+      synonym_as_property: true
+      types: []
+      uri: http://ns.disqover.com/ct/sig_nor_data
+      visible_for_groups: null
+      warning_empty_alignment_min_count: 1
+      warning_unsafe_renderer_min_count: 1
+    componentType: create_canonical_type
+    description: null
+    guid: d6e7a76d-e958-4dae-be7d-2422672a0a16
+    name: SigNOR Data
+    predecessors:
+      - 1c5766b5-0ced-46ae-b2ab-cb053c6ade71
+    position:
+      x: 730
+      'y': 320
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: d7abd1b3-01f2-4e06-822a-fb5e9e3a27b2
+      alignment: signor_phospho_human
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: interaction.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: d7abd1b3-01f2-4e06-822a-fb5e9e3a27b2
+    name: null
+    predecessors:
+      - dfa6543d-dd2c-42fe-b7e4-95e17c6e9702
+    position:
+      x: -220
+      'y': 670
+  - actionOptions:
+      action: no_operation
+      action_guid: dab33c6b-62fe-4173-bb57-d46004e9fad1
+      alignment: signor_phospho_human
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: dab33c6b-62fe-4173-bb57-d46004e9fad1
+    name: null
+    predecessors:
+      - c55e982f-60d9-47a6-a0f1-fefd26a005c1
+    position:
+      x: -520
+      'y': 710
+  - actionOptions:
+      action: csv_importer
+      action_guid: def86c94-3f5c-48b1-9a70-0711bb71b09f
+      alignment: signor_phospho_mouse
+      columns:
+        - auxiliary: false
+          file_column: ENTITYA
+          predicate: entitya
+        - auxiliary: false
+          file_column: TYPEA
+          predicate: typea
+        - auxiliary: false
+          file_column: IDA
+          predicate: ida
+        - auxiliary: false
+          file_column: DATABASEA
+          predicate: databasea
+        - auxiliary: false
+          file_column: ENTITYB
+          predicate: entityb
+        - auxiliary: false
+          file_column: TYPEB
+          predicate: typeb
+        - auxiliary: false
+          file_column: IDB
+          predicate: idb
+        - auxiliary: false
+          file_column: DATABASEB
+          predicate: databaseb
+        - auxiliary: false
+          file_column: EFFECT
+          predicate: effect
+        - auxiliary: false
+          file_column: MECHANISM
+          predicate: mechanism
+        - auxiliary: false
+          file_column: RESIDUE
+          predicate: residue
+        - auxiliary: false
+          file_column: SEQUENCE
+          predicate: sequence
+        - auxiliary: false
+          file_column: TAX_ID
+          predicate: tax_id
+        - auxiliary: false
+          file_column: CELL_DATA
+          predicate: cell_data
+        - auxiliary: false
+          file_column: TISSUE_DATA
+          predicate: tissue_data
+        - auxiliary: false
+          file_column: MODULATOR_COMPLEX
+          predicate: modulator_complex
+        - auxiliary: false
+          file_column: TARGET_COMPLEX
+          predicate: target_complex
+        - auxiliary: false
+          file_column: MODIFICATIONA
+          predicate: modificationa
+        - auxiliary: false
+          file_column: MODASEQ
+          predicate: modaseq
+        - auxiliary: false
+          file_column: MODIFICATIONB
+          predicate: modificationb
+        - auxiliary: false
+          file_column: MODBSEQ
+          predicate: modbseq
+        - auxiliary: false
+          file_column: PMID
+          predicate: pmid
+        - auxiliary: false
+          file_column: DIRECT
+          predicate: direct
+        - auxiliary: false
+          file_column: NOTES
+          predicate: notes
+        - auxiliary: false
+          file_column: ANNOTATOR
+          predicate: annotator
+        - auxiliary: false
+          file_column: SENTENCE
+          predicate: sentence
+        - auxiliary: false
+          file_column: SCORE
+          predicate: score
+        - auxiliary: false
+          file_column: SIGNOR_ID
+          predicate: signor_id
+      data_source: http://ns.disqover.com/datasource/sig_nor
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/SigNOR/M_musculus_phosphorylations_20_09_23.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: ''''
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: def86c94-3f5c-48b1-9a70-0711bb71b09f
+    name: Import Signor Mouse Phosphorylation Data
+    predecessors:
+      - 22344593-2bbd-480e-9c58-e31f06a276a5
+    position:
+      x: -670
+      'y': 390
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: df711543-b026-44b7-b6ec-fe34a47e0eba
+      alignment: signor_rat_all_data
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: interaction.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: df711543-b026-44b7-b6ec-fe34a47e0eba
+    name: null
+    predecessors:
+      - a7a5b1e1-4e06-4102-9932-a6c66afc4720
+    position:
+      x: -70
+      'y': 120
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: dfa6543d-dd2c-42fe-b7e4-95e17c6e9702
+      alignment: signor_phospho_human
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >-
+          set @interaction = [$$tax_id.lit + "::" + $$entitya.lit + "::" +
+          $$entityb.lit + "::" + $$residue.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: dfa6543d-dd2c-42fe-b7e4-95e17c6e9702
+    name: null
+    predecessors:
+      - dab33c6b-62fe-4173-bb57-d46004e9fad1
+    position:
+      x: -370
+      'y': 710
+  - actionOptions:
+      action: csv_importer
+      action_guid: e2edabb9-cf9e-4e8a-97c5-7b9b9fab0e00
+      alignment: gpcr_ga_dataset
+      columns:
+        - auxiliary: false
+          file_column: ENTITYA
+          predicate: entitya
+        - auxiliary: false
+          file_column: TYPEA
+          predicate: typea
+        - auxiliary: false
+          file_column: IDA
+          predicate: ida
+        - auxiliary: false
+          file_column: DATABASEA
+          predicate: databasea
+        - auxiliary: false
+          file_column: ENTITYB
+          predicate: entityb
+        - auxiliary: false
+          file_column: TYPEB
+          predicate: typeb
+        - auxiliary: false
+          file_column: IDB
+          predicate: idb
+        - auxiliary: false
+          file_column: DATABASEB
+          predicate: databaseb
+        - auxiliary: false
+          file_column: EFFECT
+          predicate: effect
+        - auxiliary: false
+          file_column: MECHANISM
+          predicate: mechanism
+        - auxiliary: false
+          file_column: RESIDUE
+          predicate: residue
+        - auxiliary: false
+          file_column: SEQUENCE
+          predicate: sequence
+        - auxiliary: false
+          file_column: TAX_ID
+          predicate: tax_id
+        - auxiliary: false
+          file_column: CELL_DATA
+          predicate: cell_data
+        - auxiliary: false
+          file_column: TISSUE_DATA
+          predicate: tissue_data
+        - auxiliary: false
+          file_column: MODULATOR_COMPLEX
+          predicate: modulator_complex
+        - auxiliary: false
+          file_column: TARGET_COMPLEX
+          predicate: target_complex
+        - auxiliary: false
+          file_column: MODIFICATIONA
+          predicate: modificationa
+        - auxiliary: false
+          file_column: MODASEQ
+          predicate: modaseq
+        - auxiliary: false
+          file_column: MODIFICATIONB
+          predicate: modificationb
+        - auxiliary: false
+          file_column: MODBSEQ
+          predicate: modbseq
+        - auxiliary: false
+          file_column: PMID
+          predicate: pmid
+        - auxiliary: false
+          file_column: DIRECT
+          predicate: direct
+        - auxiliary: false
+          file_column: NOTES
+          predicate: notes
+        - auxiliary: false
+          file_column: ANNOTATOR
+          predicate: annotator
+        - auxiliary: false
+          file_column: SENTENCE
+          predicate: sentence
+        - auxiliary: false
+          file_column: SCORE
+          predicate: score
+        - auxiliary: false
+          file_column: SIGNOR_ID
+          predicate: signor_id
+      data_source: http://ns.disqover.com/datasource/sig_nor
+      delimiter: ','
+      escape_character: null
+      fieldnames: null
+      file_encoding: null
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/SigNOR/GPCR-GaDataset.txt
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: e2edabb9-cf9e-4e8a-97c5-7b9b9fab0e00
+    name: Import GPCR GaDataset
+    predecessors:
+      - 22344593-2bbd-480e-9c58-e31f06a276a5
+    position:
+      x: -660
+      'y': 870
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: e30e07a6-18e3-4e3f-989b-86534f52e19d
+      alignment: signor_mouse_all_data
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: set @organism = Map($databasea.lit, _item, "Mus musculus");
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: e30e07a6-18e3-4e3f-989b-86534f52e19d
+    name: null
+    predecessors:
+      - c08d04c4-2db8-4e42-b3ec-77790358ebd9
+    position:
+      x: -370
+      'y': -80
+  - actionOptions:
+      action: merge_alignments
+      action_guid: e60bdeef-ccd7-484f-8d63-4c2ef1298a14
+      auto_merge_instances: merge_if_needed
+      destination_alignment: signor_human_all_data
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: signor_mouse_all_data
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: e60bdeef-ccd7-484f-8d63-4c2ef1298a14
+    name: null
+    predecessors:
+      - 8f29e3be-32ed-4276-a509-89cd8a67fead
+      - eb2a866f-835f-47d6-8c04-c33fad00433c
+    position:
+      x: 410
+      'y': 90
+  - actionOptions:
+      action: set_subject_label
+      action_guid: e6219275-774e-4d8d-a002-05966d4f152e
+      alignment: signor_rat_all_data
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: interaction.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: e6219275-774e-4d8d-a002-05966d4f152e
+    name: null
+    predecessors:
+      - a7a5b1e1-4e06-4102-9932-a6c66afc4720
+    position:
+      x: -70
+      'y': 40
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: e97a84a6-daf2-4ce0-ae22-c9f17210ed7f
+      alignment: signor_phospho_rat
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: interaction.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: e97a84a6-daf2-4ce0-ae22-c9f17210ed7f
+    name: null
+    predecessors:
+      - 6acbf2e3-ac97-4813-9fff-4694fd4c7e3b
+    position:
+      x: -220
+      'y': 510
+  - actionOptions:
+      action: no_operation
+      action_guid: ea873b5d-3617-46e9-be93-301f9a080a6b
+      alignment: signor_phospho_rat
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: ea873b5d-3617-46e9-be93-301f9a080a6b
+    name: null
+    predecessors:
+      - 629ee248-27df-4299-bd51-8ca08d0607b1
+    position:
+      x: -520
+      'y': 550
+  - actionOptions:
+      action: merge_alignments
+      action_guid: eb2a866f-835f-47d6-8c04-c33fad00433c
+      auto_merge_instances: merge_if_needed
+      destination_alignment: signor_mouse_all_data
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: signor_rat_all_data
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: eb2a866f-835f-47d6-8c04-c33fad00433c
+    name: null
+    predecessors:
+      - 665ed484-735e-449b-a44b-da0dd6a7e7df
+      - d224166b-7647-4d94-bbba-4f3377139ff7
+    position:
+      x: 250
+      'y': 0
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: f20301d5-b413-4ed6-a355-232e07125da7
+      alignment: signor_phospho_mouse
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: >-
+          set @interaction = [$$tax_id.lit + "::" + $$entitya.lit + "::" +
+          $$entityb.lit + "::" + $$residue.lit]
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: f20301d5-b413-4ed6-a355-232e07125da7
+    name: null
+    predecessors:
+      - 0237cee2-6932-4721-9e22-5506ab182662
+    position:
+      x: -370
+      'y': 390
+  - actionOptions:
+      action: csv_importer
+      action_guid: f24be926-4c27-486f-bba8-5784feced698
+      alignment: signor_human_all_data
+      columns:
+        - auxiliary: false
+          file_column: ENTITYA
+          predicate: entitya
+        - auxiliary: false
+          file_column: TYPEA
+          predicate: typea
+        - auxiliary: false
+          file_column: IDA
+          predicate: ida
+        - auxiliary: false
+          file_column: DATABASEA
+          predicate: databasea
+        - auxiliary: false
+          file_column: ENTITYB
+          predicate: entityb
+        - auxiliary: false
+          file_column: TYPEB
+          predicate: typeb
+        - auxiliary: false
+          file_column: IDB
+          predicate: idb
+        - auxiliary: false
+          file_column: DATABASEB
+          predicate: databaseb
+        - auxiliary: false
+          file_column: EFFECT
+          predicate: effect
+        - auxiliary: false
+          file_column: MECHANISM
+          predicate: mechanism
+        - auxiliary: false
+          file_column: RESIDUE
+          predicate: residue
+        - auxiliary: false
+          file_column: SEQUENCE
+          predicate: sequence
+        - auxiliary: false
+          file_column: TAX_ID
+          predicate: tax_id
+        - auxiliary: false
+          file_column: CELL_DATA
+          predicate: cell_data
+        - auxiliary: false
+          file_column: TISSUE_DATA
+          predicate: tissue_data
+        - auxiliary: false
+          file_column: MODULATOR_COMPLEX
+          predicate: modulator_complex
+        - auxiliary: false
+          file_column: TARGET_COMPLEX
+          predicate: target_complex
+        - auxiliary: false
+          file_column: MODIFICATIONA
+          predicate: modificationa
+        - auxiliary: false
+          file_column: MODASEQ
+          predicate: modaseq
+        - auxiliary: false
+          file_column: MODIFICATIONB
+          predicate: modificationb
+        - auxiliary: false
+          file_column: MODBSEQ
+          predicate: modbseq
+        - auxiliary: false
+          file_column: PMID
+          predicate: pmid
+        - auxiliary: false
+          file_column: DIRECT
+          predicate: direct
+        - auxiliary: false
+          file_column: NOTES
+          predicate: notes
+        - auxiliary: false
+          file_column: ANNOTATOR
+          predicate: annotator
+        - auxiliary: false
+          file_column: SENTENCE
+          predicate: sentence
+        - auxiliary: false
+          file_column: SCORE
+          predicate: score
+        - auxiliary: false
+          file_column: SIGNOR_ID
+          predicate: signor_id
+      data_source: http://ns.disqover.com/datasource/sig_nor
+      delimiter: \t
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PUBLIC_DATA/SigNOR/all_data_20_09_23.tsv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: f24be926-4c27-486f-bba8-5784feced698
+    name: Import SigNOR Human All Data
+    predecessors:
+      - 22344593-2bbd-480e-9c58-e31f06a276a5
+    position:
+      x: -670
+      'y': 240
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: f52c2f54-6b3c-425c-a5c5-a051e4ce8b14
+      alignment: signor_rat_all_data
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: set @organism = Map($databasea.lit, _item, "Rattus norvegicus");
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: f52c2f54-6b3c-425c-a5c5-a051e4ce8b14
+    name: null
+    predecessors:
+      - 20924580-a49e-42d1-824b-5de06b54e112
+    position:
+      x: -370
+      'y': 80
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: f91a7160-d88f-406a-9f59-b27f30dfadfa
+      alignment: signor_mouse_all_data
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: interaction.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: f91a7160-d88f-406a-9f59-b27f30dfadfa
+    name: null
+    predecessors:
+      - cebdbb75-fcb7-45c8-a723-a975df2ba9f5
+    position:
+      x: -70
+      'y': -120
+  - actionOptions:
+      action: indexing
+      action_guid: fecb1baf-29a1-4cd8-bf0b-85a5cc12fbaa
+      drop_predicates: false
+      warning_empty_alignment_min_count: 1
+    componentType: indexing
+    description: null
+    guid: fecb1baf-29a1-4cd8-bf0b-85a5cc12fbaa
+    name: null
+    predecessors:
+      - d6e7a76d-e958-4dae-be7d-2422672a0a16
+    position:
+      x: 880
+      'y': 320
+createdAt: '2023-09-20T16:53:11.178297'
+createdBy: natalie.romanov@merckgroup.com
+description: public asset
+id: 7558f7c4-13f6-4dbc-bad6-f63e44ca005c
+lastRunInfo:
+  data:
+    attributes:
+      indexed: false
+      runBy: natalie.romanov@merckgroup.com
+      startedAt: '2023-09-22T08:35:03.469743'
+      status: Completed with success
+    id: 51859bef-c6a4-473b-8835-670e1f1b9b41
+    type: lastRunInfo
+name: SigNOR Base
+segments: []
+type: pipeline
+updatedAt: '2023-09-22T08:34:56.761794'
+uriTemplates:
+  - template: http://ns.disqover.com
+    templateType: namespace
+  - template: ct/${canonical_type_label}
+    templateType: canonical_type
+  - template: facet/${canonical_type_label}/${facet_label}
+    templateType: facet
+  - template: property/${canonical_type_label}/${property_label}
+    templateType: property
+  - template: >-
+      typed_link/${source_canonical_type_label}/${destination_canonical_type_label}
+    templateType: typed_link
+  - template: >-
+      relation_type/${source_canonical_type_label}/${destination_canonical_type_label}/${relation_type_label}
+    templateType: relation_type
+  - template: datasource/${data_source_label}
+    templateType: data_source
+  - template: subinstance/${subinstance_type_label}
+    templateType: subinstance_type
+version: 4

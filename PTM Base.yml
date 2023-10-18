@@ -1,0 +1,2318 @@
+components:
+  - actionOptions:
+      action: synchronize_federated_alignment
+      action_guid: 01e1fff2-3201-4c89-ba48-07e81362501c
+      alignment: dbptm_publications
+      filter: null
+      match_labels: []
+      match_type: disq:matchtype.lit
+      match_uri: disq:uri.uri
+      qc_fraction_failures: null
+      use_max_dataset_matches: true
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+    componentType: synchronize_federated_alignment
+    description: null
+    guid: 01e1fff2-3201-4c89-ba48-07e81362501c
+    name: Sync Publications
+    predecessors:
+      - b878e846-0ae7-4c98-bc2c-30a15ce960d7
+    position:
+      x: -400
+      'y': 580
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 04dfc776-e3a8-42e3-8edb-01918cea43f6
+      alignment: Uniprot
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($$domain.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @domain_list = ListRemoveNull(ListDistinct(StrSplit($$domain.lit,
+          ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 04dfc776-e3a8-42e3-8edb-01918cea43f6
+    name: Split Domains
+    predecessors:
+      - 0e077445-ebd7-4836-8c20-8f2cef458fc6
+    position:
+      x: 530
+      'y': -60
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 0e077445-ebd7-4836-8c20-8f2cef458fc6
+      alignment: Uniprot
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($sub_sequence.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @sub_sequence_list =
+          ListRemoveNull(ListDistinct(StrSplit($$sub_sequence.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 0e077445-ebd7-4836-8c20-8f2cef458fc6
+    name: Split SubSequences
+    predecessors:
+      - 246e1f44-1a2c-45ab-9ce0-28d9bfc639b4
+    position:
+      x: 380
+      'y': -60
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 0f04542a-160d-4657-b3eb-ece64b8e78be
+      alignment: phosphoSitePlus
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($datasource.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @datasource_list =
+          ListRemoveNull(ListDistinct(StrSplit($$datasource.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 0f04542a-160d-4657-b3eb-ece64b8e78be
+    name: Split Datasources
+    predecessors:
+      - 5d99a639-705a-41f6-a7c8-079e4defbfce
+    position:
+      x: 190
+      'y': -20
+  - actionOptions:
+      action: csv_importer
+      action_guid: 13cb07bc-1e74-4069-9699-64f2a3deb4a7
+      alignment: dbPTM
+      columns:
+        - auxiliary: false
+          file_column: Uniprot
+          predicate: uniprot
+        - auxiliary: false
+          file_column: Position
+          predicate: position
+        - auxiliary: false
+          file_column: PTM
+          predicate: ptm
+        - auxiliary: false
+          file_column: Residue
+          predicate: residue
+        - auxiliary: false
+          file_column: ptmResidue
+          predicate: ptm_residue
+        - auxiliary: false
+          file_column: unique_index
+          predicate: unique_index
+        - auxiliary: false
+          file_column: PubmedID
+          predicate: pubmed_id
+        - auxiliary: false
+          file_column: TimeOfDownload
+          predicate: time_of_download
+        - auxiliary: false
+          file_column: Specific Modification
+          predicate: specific_modification
+        - auxiliary: false
+          file_column: UniprotKB
+          predicate: uniprot_kb
+        - auxiliary: false
+          file_column: Domain
+          predicate: domain
+        - auxiliary: false
+          file_column: Datasource
+          predicate: datasource
+        - auxiliary: false
+          file_column: Sub_Sequence
+          predicate: sub_sequence
+        - auxiliary: false
+          file_column: UniprotName
+          predicate: uniprot_name
+      data_source: http://ns.disqover.com/datasource/ptm_sources_combined
+      delimiter: ','
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PRECLINICAL/data_allPtms_merged.csv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: 13cb07bc-1e74-4069-9699-64f2a3deb4a7
+    name: Import PTM Data
+    predecessors:
+      - 92c9ea97-5ae8-4602-a3c0-91a42d7cdef7
+    position:
+      x: -2080
+      'y': 90
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 15b63120-6e44-4772-a08b-d3d4bd9e604a
+      alignment: phosphoSitePlus
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($specific_modification.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @specific_modification_list =
+          ListRemoveNull(ListDistinct(StrSplit($$specific_modification.lit,
+          ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 15b63120-6e44-4772-a08b-d3d4bd9e604a
+    name: Split Specific Modifications
+    predecessors:
+      - b2d5f3d9-cda3-4cf3-81be-7fde4810acb4
+    position:
+      x: -110
+      'y': -20
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 18c9bd53-8767-48de-ac38-b7fb8e4fec50
+      alignment: uniprot_distinct
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: new_unique_index.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 18c9bd53-8767-48de-ac38-b7fb8e4fec50
+    name: null
+    predecessors:
+      - ba5a9bd3-f7a5-472e-b39e-f92dc981405d
+    position:
+      x: -690
+      'y': 450
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 22c6a3f4-86e8-4f94-949c-20eb53dba6c3
+      alignment: phosphoSitePlus
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 22c6a3f4-86e8-4f94-949c-20eb53dba6c3
+    name: null
+    predecessors:
+      - 979f07b2-2de6-4ced-a218-2269d74f7101
+    position:
+      x: -1510
+      'y': 320
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 246e1f44-1a2c-45ab-9ce0-28d9bfc639b4
+      alignment: Uniprot
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($datasource.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @datasource_list =
+          ListRemoveNull(ListDistinct(StrSplit($$datasource.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 246e1f44-1a2c-45ab-9ce0-28d9bfc639b4
+    name: Split Datasources
+    predecessors:
+      - 2a4759a6-7d25-4b38-9001-d8e18067baea
+    position:
+      x: 230
+      'y': -60
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 25484b85-0035-4968-8ed5-718c652c0726
+      alignment: dbPTM
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($pubmed_id.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: set @pubmed_id_list = ListDistinct(StrSplit($$pubmed_id.lit, ";"))
+        tests: >-
+          $pubmed_id.lit = ["5623235;5656556"],$pubmed_id_list =
+          [["5623235","5656556"]]
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 25484b85-0035-4968-8ed5-718c652c0726
+    name: Split Pubmed IDs
+    predecessors:
+      - a2d66d68-13aa-4b1f-af9f-a2fdfefcca9c
+    position:
+      x: -1770
+      'y': 130
+  - actionOptions:
+      action: merge_alignments
+      action_guid: 2648c24f-7075-4b7d-9975-17a33dc97dd7
+      auto_merge_instances: merge_if_needed
+      destination_alignment: phosSitePlus_publications
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: uniprot_publications
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: 2648c24f-7075-4b7d-9975-17a33dc97dd7
+    name: Merge Publications
+    predecessors:
+      - c5b1da37-f601-4109-9306-c796856be322
+      - fadff307-38ec-48b8-a55f-317ff248d52d
+    position:
+      x: -700
+      'y': 530
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 2a4759a6-7d25-4b38-9001-d8e18067baea
+      alignment: Uniprot
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($uniprot_kb.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @uniprot_kb_list =
+          ListRemoveNull(ListDistinct(StrSplit($$uniprot_kb.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 2a4759a6-7d25-4b38-9001-d8e18067baea
+    name: Split Uniprot Sources
+    predecessors:
+      - 3881f3a7-9d64-4c74-b331-ff107dd9fa5e
+    position:
+      x: 80
+      'y': -60
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 2b476b37-340f-40ab-9ca0-bba8231d03d5
+      alignment: dbptm_distinct
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: |-
+          #set @new_unique_index = ["dbptm_" + $$unique_index.lit];
+          set @new_unique_index = ["dbptm_" + $$disq:uri.uri];
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 2b476b37-340f-40ab-9ca0-bba8231d03d5
+    name: Make New Unique Index
+    predecessors:
+      - 5831bceb-16a7-4773-8916-71887337124e
+    position:
+      x: -840
+      'y': 90
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 35ba6a39-8cae-4b5d-a6a7-6df5b0ea9949
+      alignment: Uniprot
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 35ba6a39-8cae-4b5d-a6a7-6df5b0ea9949
+    name: null
+    predecessors:
+      - a2236332-e438-434f-95ea-8144fad7c907
+    position:
+      x: -1460
+      'y': 550
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 3881f3a7-9d64-4c74-b331-ff107dd9fa5e
+      alignment: Uniprot
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($specific_modification.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @specific_modification_list =
+          ListRemoveNull(ListDistinct(StrSplit($$specific_modification.lit,
+          ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 3881f3a7-9d64-4c74-b331-ff107dd9fa5e
+    name: Split Specific Modifications
+    predecessors:
+      - 640b86c8-7d18-4d9c-aa56-45d6a18f3e5e
+    position:
+      x: -70
+      'y': -60
+  - actionOptions:
+      action: merge_alignments
+      action_guid: 42af5dba-aeaa-4b8a-8a71-18d37c189c65
+      auto_merge_instances: merge_if_needed
+      destination_alignment: Uniprot
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: uniprot_nullPublications
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: 42af5dba-aeaa-4b8a-8a71-18d37c189c65
+    name: ''
+    predecessors:
+      - 35ba6a39-8cae-4b5d-a6a7-6df5b0ea9949
+      - 99c4ac9d-8341-4c6c-b940-da66521113a8
+    position:
+      x: -1310
+      'y': 490
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 46d66e39-2f62-4a1f-a0b3-ed4588fd546d
+      alignment: dbPTM
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($datasource.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @datasource_list =
+          ListRemoveNull(ListDistinct(StrSplit($$datasource.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 46d66e39-2f62-4a1f-a0b3-ed4588fd546d
+    name: Split Datasources
+    predecessors:
+      - fd50fdf2-4213-4049-b585-e85e2f726a75
+    position:
+      x: 150
+      'y': 20
+  - actionOptions:
+      action: no_operation
+      action_guid: 4b94ca97-1092-40a2-8633-68678e290a05
+      alignment: uniprot_distinct
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: 4b94ca97-1092-40a2-8633-68678e290a05
+    name: null
+    predecessors:
+      - 18c9bd53-8767-48de-ac38-b7fb8e4fec50
+      - a4c7e09b-5a7a-42b6-b609-24b6ccb7232d
+    position:
+      x: -530
+      'y': 410
+  - actionOptions:
+      action: set_subject_label
+      action_guid: 57849b21-60d9-4e42-9325-91eece057723
+      alignment: phosphositeplus_distinct
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: new_unique_index.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: 57849b21-60d9-4e42-9325-91eece057723
+    name: null
+    predecessors:
+      - e213479c-2427-4166-bf77-7485bd820f92
+    position:
+      x: -690
+      'y': 290
+  - actionOptions:
+      action: split_class
+      action_guid: 5831bceb-16a7-4773-8916-71887337124e
+      destination_alignment: dbptm_distinct
+      exclude_predicates: null
+      filter:
+        expression: ListContains($datasource_list.lit, "dbPTM")
+        tests: ''
+      include_predicates: null
+      remove_copied: true
+      source_alignment: dbPTM
+      warning_empty_alignment_min_count: 1
+    componentType: split_class
+    description: null
+    guid: 5831bceb-16a7-4773-8916-71887337124e
+    name: Extract dbPTM
+    predecessors:
+      - 6a42491c-17e4-4012-9b83-ded08a6e3fb8
+    position:
+      x: -990
+      'y': 90
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 5d99a639-705a-41f6-a7c8-079e4defbfce
+      alignment: phosphoSitePlus
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($uniprot_kb.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @uniprot_kb_list =
+          ListRemoveNull(ListDistinct(StrSplit($$uniprot_kb.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 5d99a639-705a-41f6-a7c8-079e4defbfce
+    name: Split Uniprot Sources
+    predecessors:
+      - 15b63120-6e44-4772-a08b-d3d4bd9e604a
+    position:
+      x: 40
+      'y': -20
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 5de33325-e345-4fb0-b29f-889ddaa00b48
+      alignment: phosphositeplus_distinct
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: true
+      prefix: ''
+      source_predicate: new_unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 5de33325-e345-4fb0-b29f-889ddaa00b48
+    name: null
+    predecessors:
+      - e213479c-2427-4166-bf77-7485bd820f92
+    position:
+      x: -690
+      'y': 210
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 640b86c8-7d18-4d9c-aa56-45d6a18f3e5e
+      alignment: Uniprot
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($time_of_download.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @time_of_download_list =
+          ListRemoveNull(ListDistinct(StrSplit($$time_of_download.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 640b86c8-7d18-4d9c-aa56-45d6a18f3e5e
+    name: Split TimeOfDownloads
+    predecessors:
+      - 42af5dba-aeaa-4b8a-8a71-18d37c189c65
+    position:
+      x: -220
+      'y': -60
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 68ff1317-782d-4b41-8df0-82ec1225a26c
+      alignment: dbPTM
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 68ff1317-782d-4b41-8df0-82ec1225a26c
+    name: null
+    predecessors:
+      - 25484b85-0035-4968-8ed5-718c652c0726
+    position:
+      x: -1620
+      'y': 80
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 6a42491c-17e4-4012-9b83-ded08a6e3fb8
+      alignment: dbPTM
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($$domain.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @domain_list = ListRemoveNull(ListDistinct(StrSplit($$domain.lit,
+          ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 6a42491c-17e4-4012-9b83-ded08a6e3fb8
+    name: Split Domains
+    predecessors:
+      - a01f7276-df5d-44d9-9e6e-6fe65c24a280
+    position:
+      x: 450
+      'y': 20
+  - actionOptions:
+      action: split_class
+      action_guid: 6bbbbe18-cfaf-4bf4-a5df-ce9615b386aa
+      destination_alignment: phosphositeplus_distinct
+      exclude_predicates: null
+      filter:
+        expression: ListContains($datasource_list.lit, "phosSitePlus")
+        tests: ''
+      include_predicates: null
+      remove_copied: true
+      source_alignment: phosphoSitePlus
+      warning_empty_alignment_min_count: 1
+    componentType: split_class
+    description: null
+    guid: 6bbbbe18-cfaf-4bf4-a5df-ce9615b386aa
+    name: Extract phosphoSitePlus Class
+    predecessors:
+      - 899fae98-b64f-4708-ba12-d05ae469ea0c
+    position:
+      x: -990
+      'y': 250
+  - actionOptions:
+      action: csv_importer
+      action_guid: 708d749a-ab54-4dc8-86ca-99597d5dcabd
+      alignment: phosphoSitePlus
+      columns:
+        - auxiliary: false
+          file_column: Uniprot
+          predicate: uniprot
+        - auxiliary: false
+          file_column: Position
+          predicate: position
+        - auxiliary: false
+          file_column: PTM
+          predicate: ptm
+        - auxiliary: false
+          file_column: Residue
+          predicate: residue
+        - auxiliary: false
+          file_column: ptmResidue
+          predicate: ptm_residue
+        - auxiliary: false
+          file_column: unique_index
+          predicate: unique_index
+        - auxiliary: false
+          file_column: PubmedID
+          predicate: pubmed_id
+        - auxiliary: false
+          file_column: TimeOfDownload
+          predicate: time_of_download
+        - auxiliary: false
+          file_column: Specific Modification
+          predicate: specific_modification
+        - auxiliary: false
+          file_column: UniprotKB
+          predicate: uniprot_kb
+        - auxiliary: false
+          file_column: Domain
+          predicate: domain
+        - auxiliary: false
+          file_column: Datasource
+          predicate: datasource
+        - auxiliary: false
+          file_column: Sub_Sequence
+          predicate: sub_sequence
+        - auxiliary: false
+          file_column: UniprotName
+          predicate: uniprot_name
+      data_source: http://ns.disqover.com/datasource/phospho_site_plus
+      delimiter: ','
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PRECLINICAL/data_allPtms_merged.csv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: 708d749a-ab54-4dc8-86ca-99597d5dcabd
+    name: Import PTM Data
+    predecessors:
+      - efbf2f6c-ff7a-4952-8f2d-ef21ac1488ef
+    position:
+      x: -1860
+      'y': 260
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 72d8f8d3-66a2-4fed-acdb-dd96e3f1bd45
+      alignment: dbptm_distinct
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: true
+      prefix: ''
+      source_predicate: new_unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 72d8f8d3-66a2-4fed-acdb-dd96e3f1bd45
+    name: null
+    predecessors:
+      - 2b476b37-340f-40ab-9ca0-bba8231d03d5
+    position:
+      x: -690
+      'y': 130
+  - actionOptions:
+      action: create_datasource
+      action_guid: 7afd57be-5e77-49af-8147-bbf3dfb3cfe2
+      date_modified: null
+      description: null
+      homepage: null
+      info_file_path: null
+      label: Uniprot
+      short_label: null
+      uri: http://ns.disqover.com/datasource/uniprot
+      uri_scheme: null
+      uri_scheme_example: null
+      visible_for_groups: null
+      warning_absolute_paths_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_info_file_min_count: 1
+    componentType: create_datasource
+    description: null
+    guid: 7afd57be-5e77-49af-8147-bbf3dfb3cfe2
+    name: Uniprot
+    predecessors: []
+    position:
+      x: -2050
+      'y': 450
+  - actionOptions:
+      action: split_class
+      action_guid: 7dc052b7-6893-41bc-ad31-2576f9574127
+      destination_alignment: dbptm_nullPublications
+      exclude_predicates: null
+      filter:
+        expression: ListContains($pubmed_id.lit,"nan")
+        tests: ''
+      include_predicates: null
+      remove_copied: true
+      source_alignment: dbPTM
+      warning_empty_alignment_min_count: 1
+    componentType: split_class
+    description: null
+    guid: 7dc052b7-6893-41bc-ad31-2576f9574127
+    name: Get Class with No Publications
+    predecessors:
+      - a2d66d68-13aa-4b1f-af9f-a2fdfefcca9c
+    position:
+      x: -1770
+      'y': 0
+  - actionOptions:
+      action: csv_importer
+      action_guid: 7f647459-72ff-4488-97c0-367d3120cbe7
+      alignment: Uniprot
+      columns:
+        - auxiliary: false
+          file_column: Uniprot
+          predicate: uniprot
+        - auxiliary: false
+          file_column: Position
+          predicate: position
+        - auxiliary: false
+          file_column: PTM
+          predicate: ptm
+        - auxiliary: false
+          file_column: Residue
+          predicate: residue
+        - auxiliary: false
+          file_column: ptmResidue
+          predicate: ptm_residue
+        - auxiliary: false
+          file_column: unique_index
+          predicate: unique_index
+        - auxiliary: false
+          file_column: PubmedID
+          predicate: pubmed_id
+        - auxiliary: false
+          file_column: TimeOfDownload
+          predicate: time_of_download
+        - auxiliary: false
+          file_column: Specific Modification
+          predicate: specific_modification
+        - auxiliary: false
+          file_column: UniprotKB
+          predicate: uniprot_kb
+        - auxiliary: false
+          file_column: Domain
+          predicate: domain
+        - auxiliary: false
+          file_column: Datasource
+          predicate: datasource
+        - auxiliary: false
+          file_column: Sub_Sequence
+          predicate: sub_sequence
+        - auxiliary: false
+          file_column: UniprotName
+          predicate: uniprot_name
+      data_source: http://ns.disqover.com/datasource/uniprot
+      delimiter: ','
+      escape_character: null
+      fieldnames: null
+      file_encoding: utf-8
+      filename_predicate: ''
+      files:
+        - PRECLINICAL/data_allPtms_merged.csv
+      ignore_quotes: false
+      instance_data_sources: false
+      null_tokens: null
+      quote_character: '"'
+      rdf_type: null
+      warning_empty_alignment_min_count: 1
+      warning_empty_column_min_count: 1
+      warning_import_error_min_count: 1
+    componentType: csv_importer
+    description: null
+    guid: 7f647459-72ff-4488-97c0-367d3120cbe7
+    name: Import PTM Data
+    predecessors:
+      - 7afd57be-5e77-49af-8147-bbf3dfb3cfe2
+    position:
+      x: -1870
+      'y': 450
+  - actionOptions:
+      action: split_class
+      action_guid: 898e46e5-3336-4aa7-affc-0a8c65a7af4a
+      destination_alignment: phosphoSite_nullPublications
+      exclude_predicates: null
+      filter:
+        expression: ListContains($pubmed_id.lit,"nan")
+        tests: ''
+      include_predicates: null
+      remove_copied: true
+      source_alignment: phosphoSitePlus
+      warning_empty_alignment_min_count: 1
+    componentType: split_class
+    description: null
+    guid: 898e46e5-3336-4aa7-affc-0a8c65a7af4a
+    name: Get Class with No Publications
+    predecessors:
+      - 708d749a-ab54-4dc8-86ca-99597d5dcabd
+    position:
+      x: -1690
+      'y': 200
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 899fae98-b64f-4708-ba12-d05ae469ea0c
+      alignment: phosphoSitePlus
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($$domain.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @domain_list = ListRemoveNull(ListDistinct(StrSplit($$domain.lit,
+          ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 899fae98-b64f-4708-ba12-d05ae469ea0c
+    name: Split Domains
+    predecessors:
+      - f471c4db-d3ad-4965-971f-a027746ad8b4
+    position:
+      x: 490
+      'y': -20
+  - actionOptions:
+      action: create_datasource
+      action_guid: 92c9ea97-5ae8-4602-a3c0-91a42d7cdef7
+      date_modified: null
+      description: null
+      homepage: null
+      info_file_path: null
+      label: dbPTM
+      short_label: null
+      uri: http://ns.disqover.com/datasource/ptm_sources_combined
+      uri_scheme: null
+      uri_scheme_example: null
+      visible_for_groups: null
+      warning_absolute_paths_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_info_file_min_count: 1
+    componentType: create_datasource
+    description: null
+    guid: 92c9ea97-5ae8-4602-a3c0-91a42d7cdef7
+    name: dbPTM
+    predecessors: []
+    position:
+      x: -2230
+      'y': 90
+  - actionOptions:
+      action: merge_alignments
+      action_guid: 93919987-5876-4048-a13d-b291127ff853
+      auto_merge_instances: merge_if_needed
+      destination_alignment: dbPTM
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: dbptm_nullPublications
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: 93919987-5876-4048-a13d-b291127ff853
+    name: ''
+    predecessors:
+      - 68ff1317-782d-4b41-8df0-82ec1225a26c
+      - bb2bd2f5-31fd-4b0a-b37b-3e26de2accac
+    position:
+      x: -1370
+      'y': 70
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 949a36da-3ef9-4940-8ccf-3457f95115fc
+      alignment: phosphoSite_nullPublications
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 949a36da-3ef9-4940-8ccf-3457f95115fc
+    name: null
+    predecessors:
+      - 898e46e5-3336-4aa7-affc-0a8c65a7af4a
+    position:
+      x: -1540
+      'y': 200
+  - actionOptions:
+      action: split_class
+      action_guid: 97608852-dfd4-4b0a-a444-000acbb04cb2
+      destination_alignment: uniprot_distinct
+      exclude_predicates: null
+      filter:
+        expression: ListContains($datasource_list.lit, "Uniprot")
+        tests: ''
+      include_predicates: null
+      remove_copied: true
+      source_alignment: Uniprot
+      warning_empty_alignment_min_count: 1
+    componentType: split_class
+    description: null
+    guid: 97608852-dfd4-4b0a-a444-000acbb04cb2
+    name: Extract Uniprot Class
+    predecessors:
+      - 04dfc776-e3a8-42e3-8edb-01918cea43f6
+    position:
+      x: -990
+      'y': 410
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: 979f07b2-2de6-4ced-a218-2269d74f7101
+      alignment: phosphoSitePlus
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($pubmed_id.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: set @pubmed_id_list = ListDistinct(StrSplit($$pubmed_id.lit, ";"))
+        tests: >-
+          $pubmed_id.lit = ["5623235;5656556"],$pubmed_id_list =
+          [["5623235","5656556"]]
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: 979f07b2-2de6-4ced-a218-2269d74f7101
+    name: Split Pubmed IDs
+    predecessors:
+      - 708d749a-ab54-4dc8-86ca-99597d5dcabd
+    position:
+      x: -1690
+      'y': 330
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: 99c4ac9d-8341-4c6c-b940-da66521113a8
+      alignment: uniprot_nullPublications
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: 99c4ac9d-8341-4c6c-b940-da66521113a8
+    name: null
+    predecessors:
+      - b513d7a9-cddf-4ad5-8e7b-d5eb82c29373
+    position:
+      x: -1480
+      'y': 430
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: a01f7276-df5d-44d9-9e6e-6fe65c24a280
+      alignment: dbPTM
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($sub_sequence.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @sub_sequence_list =
+          ListRemoveNull(ListDistinct(StrSplit($$sub_sequence.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: a01f7276-df5d-44d9-9e6e-6fe65c24a280
+    name: Split SubSequences
+    predecessors:
+      - 46d66e39-2f62-4a1f-a0b3-ed4588fd546d
+    position:
+      x: 300
+      'y': 20
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: a2236332-e438-434f-95ea-8144fad7c907
+      alignment: Uniprot
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($pubmed_id.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: set @pubmed_id_list = ListDistinct(StrSplit($$pubmed_id.lit, ";"))
+        tests: >-
+          $pubmed_id.lit = ["5623235;5656556"],$pubmed_id_list =
+          [["5623235","5656556"]]
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: a2236332-e438-434f-95ea-8144fad7c907
+    name: Split Pubmed IDs
+    predecessors:
+      - 7f647459-72ff-4488-97c0-367d3120cbe7
+    position:
+      x: -1630
+      'y': 560
+  - actionOptions:
+      action: no_operation
+      action_guid: a2d66d68-13aa-4b1f-af9f-a2fdfefcca9c
+      alignment: dbPTM
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: a2d66d68-13aa-4b1f-af9f-a2fdfefcca9c
+    name: null
+    predecessors:
+      - 13cb07bc-1e74-4069-9699-64f2a3deb4a7
+    position:
+      x: -1930
+      'y': 90
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: a4c7e09b-5a7a-42b6-b609-24b6ccb7232d
+      alignment: uniprot_distinct
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: true
+      prefix: ''
+      source_predicate: new_unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: a4c7e09b-5a7a-42b6-b609-24b6ccb7232d
+    name: null
+    predecessors:
+      - ba5a9bd3-f7a5-472e-b39e-f92dc981405d
+    position:
+      x: -690
+      'y': 370
+  - actionOptions:
+      action: extract_distinct
+      action_guid: aa8be804-ecaa-4af2-9b17-38c447e0f267
+      data_sources: null
+      destination_alignment: dbptm_publications
+      destination_predicate: dbptm:has_publications
+      encoding: ontoforce
+      filter: null
+      force_preferred_label: false
+      prefix: http://identifiers.org/pubmed/
+      rdf_type: null
+      source_alignment: dbptm_distinct
+      source_predicate: pubmed_id_list.lit
+      to_lower: false
+      value_expression: null
+      values_predicate: disq:label.lit
+      warning__multivalued_aimed_predicate_min_count: 1
+      warning__multivalued_alphabetically_min_count: 1
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_expression_error_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: extract_distinct
+    description: null
+    guid: aa8be804-ecaa-4af2-9b17-38c447e0f267
+    name: Extract Pubmed
+    predecessors:
+      - 5831bceb-16a7-4773-8916-71887337124e
+    position:
+      x: -860
+      'y': 0
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: b2d5f3d9-cda3-4cf3-81be-7fde4810acb4
+      alignment: phosphoSitePlus
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($time_of_download.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @time_of_download_list =
+          ListRemoveNull(ListDistinct(StrSplit($$time_of_download.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: b2d5f3d9-cda3-4cf3-81be-7fde4810acb4
+    name: Split TimeOfDownloads
+    predecessors:
+      - e9e3dfa8-71b0-4b1f-a26b-df4699bc3006
+    position:
+      x: -260
+      'y': -20
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: b4a0b850-5b63-4af2-b682-f52b9b226e24
+      alignment: dbPTM
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($time_of_download.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @time_of_download_list =
+          ListRemoveNull(ListDistinct(StrSplit($$time_of_download.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: b4a0b850-5b63-4af2-b682-f52b9b226e24
+    name: Split TimeOfDownloads
+    predecessors:
+      - 93919987-5876-4048-a13d-b291127ff853
+    position:
+      x: -300
+      'y': 20
+  - actionOptions:
+      action: split_class
+      action_guid: b513d7a9-cddf-4ad5-8e7b-d5eb82c29373
+      destination_alignment: uniprot_nullPublications
+      exclude_predicates: null
+      filter:
+        expression: ListContains($pubmed_id.lit,"nan")
+        tests: ''
+      include_predicates: null
+      remove_copied: true
+      source_alignment: Uniprot
+      warning_empty_alignment_min_count: 1
+    componentType: split_class
+    description: null
+    guid: b513d7a9-cddf-4ad5-8e7b-d5eb82c29373
+    name: Get Class with No Publications
+    predecessors:
+      - 7f647459-72ff-4488-97c0-367d3120cbe7
+    position:
+      x: -1630
+      'y': 430
+  - actionOptions:
+      action: merge_alignments
+      action_guid: b878e846-0ae7-4c98-bc2c-30a15ce960d7
+      auto_merge_instances: merge_if_needed
+      destination_alignment: dbptm_publications
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: phosSitePlus_publications
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: b878e846-0ae7-4c98-bc2c-30a15ce960d7
+    name: Merge Publications
+    predecessors:
+      - 2648c24f-7075-4b7d-9975-17a33dc97dd7
+      - aa8be804-ecaa-4af2-9b17-38c447e0f267
+    position:
+      x: -540
+      'y': 580
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: ba5a9bd3-f7a5-472e-b39e-f92dc981405d
+      alignment: uniprot_distinct
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: set @new_unique_index = ["uniprot_" + $$disq:uri.uri];
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: ba5a9bd3-f7a5-472e-b39e-f92dc981405d
+    name: Make New Unique Index
+    predecessors:
+      - 97608852-dfd4-4b0a-a444-000acbb04cb2
+    position:
+      x: -840
+      'y': 410
+  - actionOptions:
+      action: set_subject_uri
+      action_guid: bb2bd2f5-31fd-4b0a-b37b-3e26de2accac
+      alignment: dbptm_nullPublications
+      data_sources: null
+      encoding: ontoforce
+      filter: null
+      make_aux: false
+      new_preferred: false
+      prefix: ''
+      source_predicate: unique_index.lit
+      to_lower: false
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: set_subject_uri
+    description: null
+    guid: bb2bd2f5-31fd-4b0a-b37b-3e26de2accac
+    name: null
+    predecessors:
+      - 7dc052b7-6893-41bc-ad31-2576f9574127
+    position:
+      x: -1620
+      'y': 0
+  - actionOptions:
+      action: no_operation
+      action_guid: be48a6be-3edc-462f-b1a6-a0860889e933
+      alignment: dbptm_distinct
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: be48a6be-3edc-462f-b1a6-a0860889e933
+    name: PTM Data
+    predecessors:
+      - 72d8f8d3-66a2-4fed-acdb-dd96e3f1bd45
+      - cd42598d-aff0-4d81-a5a4-8ca191147a06
+    position:
+      x: -530
+      'y': 90
+  - actionOptions:
+      action: extract_distinct
+      action_guid: c5b1da37-f601-4109-9306-c796856be322
+      data_sources: null
+      destination_alignment: uniprot_publications
+      destination_predicate: uniprot:has_publications
+      encoding: ontoforce
+      filter: null
+      force_preferred_label: false
+      prefix: http://identifiers.org/pubmed/
+      rdf_type: null
+      source_alignment: uniprot_distinct
+      source_predicate: pubmed_id_list.lit
+      to_lower: false
+      value_expression: null
+      values_predicate: disq:label.lit
+      warning__multivalued_aimed_predicate_min_count: 1
+      warning__multivalued_alphabetically_min_count: 1
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_expression_error_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: extract_distinct
+    description: null
+    guid: c5b1da37-f601-4109-9306-c796856be322
+    name: Extract Pubmed
+    predecessors:
+      - 97608852-dfd4-4b0a-a444-000acbb04cb2
+    position:
+      x: -850
+      'y': 510
+  - actionOptions:
+      action: no_operation
+      action_guid: ca828d8e-637a-42a1-b110-76fe3dbd3104
+      alignment: phosphositeplus_distinct
+      warning_empty_alignment_min_count: 1
+    componentType: no_operation
+    description: null
+    guid: ca828d8e-637a-42a1-b110-76fe3dbd3104
+    name: null
+    predecessors:
+      - 57849b21-60d9-4e42-9325-91eece057723
+      - 5de33325-e345-4fb0-b29f-889ddaa00b48
+    position:
+      x: -530
+      'y': 250
+  - actionOptions:
+      action: set_subject_label
+      action_guid: cd42598d-aff0-4d81-a5a4-8ca191147a06
+      alignment: dbptm_distinct
+      data_sources: null
+      filter: null
+      new_preferred: true
+      source_predicate: new_unique_index.lit
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_empty_min_count: 1
+      warning_empty_string_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_multivalued_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+    componentType: set_subject_label
+    description: null
+    guid: cd42598d-aff0-4d81-a5a4-8ca191147a06
+    name: null
+    predecessors:
+      - 2b476b37-340f-40ab-9ca0-bba8231d03d5
+    position:
+      x: -690
+      'y': 50
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: dac29a1d-5987-40c1-b56f-64a246095e36
+      alignment: dbPTM
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($specific_modification.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @specific_modification_list =
+          ListRemoveNull(ListDistinct(StrSplit($$specific_modification.lit,
+          ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: dac29a1d-5987-40c1-b56f-64a246095e36
+    name: Split Specific Modifications
+    predecessors:
+      - b4a0b850-5b63-4af2-b682-f52b9b226e24
+    position:
+      x: -150
+      'y': 20
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: e213479c-2427-4166-bf77-7485bd820f92
+      alignment: phosphositeplus_distinct
+      data_sources: null
+      filter: null
+      make_aux: false
+      operation:
+        expression: |-
+          #set @new_unique_index = ["phosphositeplus_" + $$unique_index.lit];
+          set @new_unique_index = ["phosphositeplus_" + $$disq:uri.uri];
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: e213479c-2427-4166-bf77-7485bd820f92
+    name: Make New Unique Index
+    predecessors:
+      - 6bbbbe18-cfaf-4bf4-a5df-ce9615b386aa
+    position:
+      x: -840
+      'y': 250
+  - actionOptions:
+      action: indexing
+      action_guid: e2c5759d-981e-4ced-9ca8-d86fb8622072
+      drop_predicates: false
+      warning_empty_alignment_min_count: 1
+    componentType: indexing
+    description: null
+    guid: e2c5759d-981e-4ced-9ca8-d86fb8622072
+    name: null
+    predecessors:
+      - f1aaad64-0aa9-49b2-b2e0-0c8d209ec53b
+    position:
+      x: -220
+      'y': 250
+  - actionOptions:
+      action: merge_alignments
+      action_guid: e9e3dfa8-71b0-4b1f-a26b-df4699bc3006
+      auto_merge_instances: merge_if_needed
+      destination_alignment: phosphoSitePlus
+      filter: null
+      keep_aux_columns: false
+      qc_merged_source_records: null
+      source_alignment: phosphoSite_nullPublications
+      source_is_preferred: false
+      warning_empty_alignment_min_count: 1
+      warning_potential_broader_visibility_min_count: 1
+      warning_public_partition_min_count: 1
+      warning_suboptimal_source_dest_min_count: 1
+    componentType: merge_alignments
+    description: null
+    guid: e9e3dfa8-71b0-4b1f-a26b-df4699bc3006
+    name: ''
+    predecessors:
+      - 22c6a3f4-86e8-4f94-949c-20eb53dba6c3
+      - 949a36da-3ef9-4940-8ccf-3457f95115fc
+    position:
+      x: -1290
+      'y': 270
+  - actionOptions:
+      action: create_datasource
+      action_guid: efbf2f6c-ff7a-4952-8f2d-ef21ac1488ef
+      date_modified: null
+      description: null
+      homepage: null
+      info_file_path: null
+      label: PhosphoSitePlus
+      short_label: null
+      uri: http://ns.disqover.com/datasource/phospho_site_plus
+      uri_scheme: null
+      uri_scheme_example: null
+      visible_for_groups: null
+      warning_absolute_paths_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_info_file_min_count: 1
+    componentType: create_datasource
+    description: null
+    guid: efbf2f6c-ff7a-4952-8f2d-ef21ac1488ef
+    name: PhosphoSitePlus
+    predecessors: []
+    position:
+      x: -2020
+      'y': 260
+  - actionOptions:
+      action: create_canonical_type
+      action_guid: f1aaad64-0aa9-49b2-b2e0-0c8d209ec53b
+      allow_mixing: true
+      classes:
+        - dbptm_distinct
+        - phosphositeplus_distinct
+        - uniprot_distinct
+      defaultHidden: false
+      description: null
+      disabled: false
+      facets: []
+      has_semantic_hit: true
+      icon: font-awesome fa-solid fa-flag-swallowtail
+      in_house: true
+      iris_data_collection_name: PTM_Data_Public
+      iris_visible_for_groups: null
+      label: PTM (Public)
+      label_renderer: http://ns.ontoforce.com/2013/disqover#string
+      properties:
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/specific_modifications
+          facet_viewType: null
+          label: Specific Modifications
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - specific_modification_list.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/specific_modifications
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/uniprot_name
+          facet_viewType: null
+          label: Uniprot Name
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - uniprot_name.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/uniprot_name
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/datasources
+          facet_viewType: null
+          label: Datasources
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - datasource_list.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/datasources
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/sub_sequence
+          facet_viewType: null
+          label: Sub-Sequence
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - sub_sequence.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/sub_sequence
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/uniprot_id
+          facet_viewType: null
+          label: Uniprot ID
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - uniprot.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/uniprot_id
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/protein_domain
+          facet_viewType: null
+          label: Protein Domain
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - domain_list.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/protein_domain
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/pubmed_i_ds
+          facet_viewType: null
+          label: Pubmed IDs
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - pubmed_id_list.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/pubmed_i_ds
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/modified_residue
+          facet_viewType: null
+          label: Modified Residue
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - ptm_residue.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/modified_residue
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: >-
+            http://ns.disqover.com/facet/ptm___public/post_translational_modification
+          facet_viewType: null
+          label: Post-translational Modification
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - ptm.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: >-
+            http://ns.disqover.com/property/ptm___public/post_translational_modification
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: int
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/position
+          facet_viewType: null
+          label: Position
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - position.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/position
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/residue
+          facet_viewType: null
+          label: Residue
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - residue.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/residue
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/uniprot_kb
+          facet_viewType: null
+          label: Uniprot KB
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - uniprot_kb_list.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/uniprot_kb
+          visible_for_groups: null
+        - create_facet: true
+          dataType: null
+          data_collection_predicate: null
+          description: null
+          disable_sorting: false
+          export_to_file: true
+          facet_additive: null
+          facet_dataType: null
+          facet_notAnnotatedLabel: null
+          facet_parentPredicate: null
+          facet_precision: null
+          facet_singleValued: false
+          facet_uri: http://ns.disqover.com/facet/ptm___public/time_of_download
+          facet_viewType: null
+          label: Time of Download
+          mixed_security_values: false
+          no_index: false
+          order_by: null
+          predicates:
+            - time_of_download_list.lit
+          publish_to_disqover: true
+          publish_to_iris: true
+          renderer: null
+          sub_type: null
+          template: null
+          uri: http://ns.disqover.com/property/ptm___public/time_of_download
+          visible_for_groups: null
+      publish_to_iris: true
+      purely_remote: false
+      synonym_as_property: true
+      types: []
+      uri: http://ns.disqover.com/ct/ptm___public
+      visible_for_groups: null
+      warning_empty_alignment_min_count: 1
+      warning_unsafe_renderer_min_count: 1
+    componentType: create_canonical_type
+    description: null
+    guid: f1aaad64-0aa9-49b2-b2e0-0c8d209ec53b
+    name: PTM Data
+    predecessors:
+      - 01e1fff2-3201-4c89-ba48-07e81362501c
+      - 4b94ca97-1092-40a2-8633-68678e290a05
+      - be48a6be-3edc-462f-b1a6-a0860889e933
+      - ca828d8e-637a-42a1-b110-76fe3dbd3104
+    position:
+      x: -370
+      'y': 250
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: f471c4db-d3ad-4965-971f-a027746ad8b4
+      alignment: phosphoSitePlus
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($sub_sequence.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @sub_sequence_list =
+          ListRemoveNull(ListDistinct(StrSplit($$sub_sequence.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: f471c4db-d3ad-4965-971f-a027746ad8b4
+    name: Split SubSequences
+    predecessors:
+      - 0f04542a-160d-4657-b3eb-ece64b8e78be
+    position:
+      x: 340
+      'y': -20
+  - actionOptions:
+      action: extract_distinct
+      action_guid: fadff307-38ec-48b8-a55f-317ff248d52d
+      data_sources: null
+      destination_alignment: phosSitePlus_publications
+      destination_predicate: phosSitePlus:has_publications
+      encoding: ontoforce
+      filter: null
+      force_preferred_label: false
+      prefix: http://identifiers.org/pubmed/
+      rdf_type: null
+      source_alignment: phosphositeplus_distinct
+      source_predicate: pubmed_id_list.lit
+      to_lower: false
+      value_expression: null
+      values_predicate: disq:label.lit
+      warning__multivalued_aimed_predicate_min_count: 1
+      warning__multivalued_alphabetically_min_count: 1
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_expression_error_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_suspicious_uri_format_min_count: 1
+    componentType: extract_distinct
+    description: null
+    guid: fadff307-38ec-48b8-a55f-317ff248d52d
+    name: Extract Pubmed
+    predecessors:
+      - 6bbbbe18-cfaf-4bf4-a5df-ce9615b386aa
+    position:
+      x: -840
+      'y': 340
+  - actionOptions:
+      action: swim_lane_action
+      action_guid: fd50fdf2-4213-4049-b585-e85e2f726a75
+      alignment: dbPTM
+      data_sources: null
+      filter:
+        expression: ListNotEmpty($uniprot_kb.lit)
+        tests: ''
+      make_aux: false
+      operation:
+        expression: >-
+          set @uniprot_kb_list =
+          ListRemoveNull(ListDistinct(StrSplit($$uniprot_kb.lit, ";;")))
+        tests: ''
+      qc_fraction_failures: null
+      warning_broader_visibility_min_count: 1
+      warning_empty_alignment_min_count: 1
+      warning_failed_record_min_count: 1
+      warning_mixed_data_source_columns_min_count: 1
+      warning_plabel_leak_min_count: 1
+      warning_provenance_overflow_min_count: 1
+      warning_puri_leak_min_count: 1
+      warning_python_optimization_min_count: 1
+    componentType: swim_lane_action
+    description: null
+    guid: fd50fdf2-4213-4049-b585-e85e2f726a75
+    name: Split Uniprot Sources
+    predecessors:
+      - dac29a1d-5987-40c1-b56f-64a246095e36
+    position:
+      x: 0
+      'y': 20
+createdAt: '2023-04-12T22:08:25.704682'
+createdBy: natalie.romanov@merckgroup.com
+description: public asset
+id: ffcea0ba-5a1b-47bd-aef0-8cdb0836ecd2
+lastRunInfo:
+  data:
+    attributes:
+      indexed: false
+      runBy: natalie.romanov@merckgroup.com
+      startedAt: '2023-08-07T12:39:26.172789'
+      status: Completed with success
+    id: 12d23a8f-e5a4-470e-92f3-5bf2ae3115fe
+    type: lastRunInfo
+name: PTM Base
+segments:
+  - actionOptions: {}
+    componentGuids:
+      - 04dfc776-e3a8-42e3-8edb-01918cea43f6
+      - 3881f3a7-9d64-4c74-b331-ff107dd9fa5e
+      - 246e1f44-1a2c-45ab-9ce0-28d9bfc639b4
+      - 0e077445-ebd7-4836-8c20-8f2cef458fc6
+      - 2a4759a6-7d25-4b38-9001-d8e18067baea
+      - 640b86c8-7d18-4d9c-aa56-45d6a18f3e5e
+    componentType: segment
+    description: null
+    guid: 08b59e0b-7539-4156-95f8-37e42cc14ecc
+    name: Define Lists
+    parentComponentGuid: null
+    position:
+      x: -1140
+      'y': 390
+    predecessors: []
+  - actionOptions: {}
+    componentGuids:
+      - b4a0b850-5b63-4af2-b682-f52b9b226e24
+      - 46d66e39-2f62-4a1f-a0b3-ed4588fd546d
+      - 6a42491c-17e4-4012-9b83-ded08a6e3fb8
+      - a01f7276-df5d-44d9-9e6e-6fe65c24a280
+      - fd50fdf2-4213-4049-b585-e85e2f726a75
+      - dac29a1d-5987-40c1-b56f-64a246095e36
+    componentType: segment
+    description: null
+    guid: 2ad7071f-199c-4fca-91f0-a64f1ab59338
+    name: Define Lists
+    parentComponentGuid: null
+    position:
+      x: -1140
+      'y': 70
+    predecessors: []
+  - actionOptions: {}
+    componentGuids:
+      - f471c4db-d3ad-4965-971f-a027746ad8b4
+      - 0f04542a-160d-4657-b3eb-ece64b8e78be
+      - 15b63120-6e44-4772-a08b-d3d4bd9e604a
+      - 899fae98-b64f-4708-ba12-d05ae469ea0c
+      - 5d99a639-705a-41f6-a7c8-079e4defbfce
+      - b2d5f3d9-cda3-4cf3-81be-7fde4810acb4
+    componentType: segment
+    description: null
+    guid: d6e8e648-8098-41a8-8e01-c8b6a570f094
+    name: Define Lists
+    parentComponentGuid: null
+    position:
+      x: -1140
+      'y': 230
+    predecessors: []
+type: pipeline
+updatedAt: '2023-08-17T19:16:20.140873'
+uriTemplates:
+  - template: http://ns.disqover.com
+    templateType: namespace
+  - template: ct/${canonical_type_label}
+    templateType: canonical_type
+  - template: facet/${canonical_type_label}/${facet_label}
+    templateType: facet
+  - template: property/${canonical_type_label}/${property_label}
+    templateType: property
+  - template: >-
+      typed_link/${source_canonical_type_label}/${destination_canonical_type_label}
+    templateType: typed_link
+  - template: >-
+      relation_type/${source_canonical_type_label}/${destination_canonical_type_label}/${relation_type_label}
+    templateType: relation_type
+  - template: datasource/${data_source_label}
+    templateType: data_source
+  - template: subinstance/${subinstance_type_label}
+    templateType: subinstance_type
+version: 4
