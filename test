@@ -1,1 +1,15 @@
 docker exec -it -u0 disqover_postgres_1 psql -h v522845-v6731-db-upgrade-dev.cbuqm0ljpfgq.us-east-1.rds.amazonaws.com -U ofusr kong
+
+Authenticating with public key "imported-openssh-key"
+Passphrase for key "imported-openssh-key":
+Last login: Mon Jan  8 21:44:53 2024 from ip-10-220-137-153.ec2.internal
+[edl-usr@ip-172-21-76-194 ~]$ sudo -i
+[root@ip-172-21-76-194 ~]# docker exec -it -u0 disqover_postgres_1 psql -h v522845-v6731-db-upgrade-dev.cbuqm0ljpfgq.us-east-1.rds.amazonaws.com -U ofusr kong
+Password for user ofusr:
+psql (11.21 (Debian 11.21-1.pgdg120+1), server 15.5)
+WARNING: psql major version 11, server major version 15.
+         Some psql features might not work.
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 25                                                         6, compression: off)
+Type "help" for help.
+
+kong=>
