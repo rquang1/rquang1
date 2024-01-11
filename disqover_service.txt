@@ -1,0 +1,19 @@
+● disqover.service - disqover
+   Loaded: loaded (/etc/systemd/system/disqover.service; enabled; vendor preset: disabled)
+   Active: failed (Result: timeout) since Thu 2024-01-11 14:20:48 UTC; 7min ago
+  Process: 30425 ExecStart=/bin/bash /disqover/disqover_setup/scripts/disqover_setup.sh -f custom_env -p disqover -y (code=killed, signal=TERM)
+ Main PID: 30425 (code=killed, signal=TERM)
+    Tasks: 0
+   Memory: 32.0K
+   CGroup: /system.slice/disqover.service
+
+Jan 11 14:10:51 ip-172-21-76-194.aws.bms.com bash[30425]: [Thu Jan 11 14:10:51 UTC 2024]  -> Starting base services
+Jan 11 14:11:19 ip-172-21-76-194.aws.bms.com bash[30425]: psql -h v522845-v6731-db-upgrade-dev.cbuqm0ljpfgq.us-east-1.rds.amazonaws.com
+Jan 11 14:13:26 ip-172-21-76-194.aws.bms.com bash[30425]: [Thu Jan 11 14:13:26 UTC 2024] Waiting for database server, 60 remaining attempts...
+Jan 11 14:15:35 ip-172-21-76-194.aws.bms.com bash[30425]: [Thu Jan 11 14:15:35 UTC 2024] Waiting for database server, 59 remaining attempts...
+Jan 11 14:17:43 ip-172-21-76-194.aws.bms.com bash[30425]: [Thu Jan 11 14:17:43 UTC 2024] Waiting for database server, 58 remaining attempts...
+Jan 11 14:19:51 ip-172-21-76-194.aws.bms.com bash[30425]: [Thu Jan 11 14:19:51 UTC 2024] Waiting for database server, 57 remaining attempts...
+Jan 11 14:20:48 ip-172-21-76-194.aws.bms.com systemd[1]: disqover.service start operation timed out. Terminating.
+Jan 11 14:20:48 ip-172-21-76-194.aws.bms.com systemd[1]: Failed to start disqover.
+Jan 11 14:20:48 ip-172-21-76-194.aws.bms.com systemd[1]: Unit disqover.service entered failed state.
+Jan 11 14:20:48 ip-172-21-76-194.aws.bms.com systemd[1]: disqover.service failed.
