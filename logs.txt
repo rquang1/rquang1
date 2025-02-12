@@ -1,0 +1,227 @@
+Apr 08 07:55:26 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/internal_keys/internal_keys-dev-1.rockspec -- you should now edit and finish it.
+Apr 08 07:55:26 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: internal_keys dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Builing plugin saml
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/saml/saml-dev-1.rockspec -- you should now edit and finish it.
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: saml dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Builing plugin disq_session
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:55:27 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/disq_session/disq_session-dev-1.rockspec -- you should now edit and finish it.
+--
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/b6ada3c4-4fe2-e5ab-6024-9768cd97f329 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/5d7e03a7-1ad8-793f-e902-20da0e227aeb HTTP/1.1" 200 430 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/backend_public_info_service HTTP/1.1" 200 399 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/backend_public_info_service/routes/backend_public_info_route HTTP/1.1" 200 503 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/backend_public_info_service/plugins/aa2c01d7-0f67-a078-467b-3f2512258aa9 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service HTTP/1.1" 200 433 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/routes/saml_logout___users_saml_idp_sign_out_route HTTP/1.1" 200 533 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/2e8c195d-e238-d95d-487f-4bc566a14f49 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/fd52d212-d4d6-8c62-0fcb-02cf6a394e6f HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/8ca40d9a-7377-f769-dd05-7a94c032c0d7 HTTP/1.1" 200 332 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/e325a69e-fb3a-3577-63fd-310ffdcf3792 HTTP/1.1" 200 351 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service HTTP/1.1" 200 435 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/routes/saml_metadata_public__users_saml_metadata_route HTTP/1.1" 200 540 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/plugins/b2178e79-5409-4e6b-49a0-69e7a43df49d HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/watched_dashboards_api__service HTTP/1.1" 200 404 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/watched_dashboards_api__service/routes/watched_dashboards_api__route HTTP/1.1" 200 521 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/watched_dashboards_api__service/plugins/34edc328-82b4-d036-b0f3-fd827ed99fcf HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/watched_dashboards_api__service/plugins/f10ea862-9b8f-c377-2a9e-000921566aac HTTP/1.1" 200 343 "-" "python-requests/2.25.1"
+Apr 08 07:55:33 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:55:33 +0000] "PUT /services/watched_dashboards_api__service/plugins/05c81355-6fcf-4b7a-ee6a-c4c4ce8f14b0 HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+--
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/internal_keys/internal_keys-dev-1.rockspec -- you should now edit and finish it.
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: internal_keys dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Builing plugin saml
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/saml/saml-dev-1.rockspec -- you should now edit and finish it.
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: saml dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Builing plugin disq_session
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 07:56:03 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/disq_session/disq_session-dev-1.rockspec -- you should now edit and finish it.
+--
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/b6ada3c4-4fe2-e5ab-6024-9768cd97f329 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/5d7e03a7-1ad8-793f-e902-20da0e227aeb HTTP/1.1" 200 430 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/backend_public_info_service HTTP/1.1" 200 399 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/backend_public_info_service/routes/backend_public_info_route HTTP/1.1" 200 503 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/backend_public_info_service/plugins/aa2c01d7-0f67-a078-467b-3f2512258aa9 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service HTTP/1.1" 200 433 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/routes/saml_logout___users_saml_idp_sign_out_route HTTP/1.1" 200 533 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/2e8c195d-e238-d95d-487f-4bc566a14f49 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/fd52d212-d4d6-8c62-0fcb-02cf6a394e6f HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/8ca40d9a-7377-f769-dd05-7a94c032c0d7 HTTP/1.1" 200 332 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/e325a69e-fb3a-3577-63fd-310ffdcf3792 HTTP/1.1" 200 351 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service HTTP/1.1" 200 435 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/routes/saml_metadata_public__users_saml_metadata_route HTTP/1.1" 200 540 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/plugins/b2178e79-5409-4e6b-49a0-69e7a43df49d HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/watched_dashboards_api__service HTTP/1.1" 200 404 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/watched_dashboards_api__service/routes/watched_dashboards_api__route HTTP/1.1" 200 521 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/watched_dashboards_api__service/plugins/34edc328-82b4-d036-b0f3-fd827ed99fcf HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/watched_dashboards_api__service/plugins/f10ea862-9b8f-c377-2a9e-000921566aac HTTP/1.1" 200 343 "-" "python-requests/2.25.1"
+Apr 08 07:56:09 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:07:56:09 +0000] "PUT /services/watched_dashboards_api__service/plugins/05c81355-6fcf-4b7a-ee6a-c4c4ce8f14b0 HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+--
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/internal_keys/internal_keys-dev-1.rockspec -- you should now edit and finish it.
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: internal_keys dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Builing plugin saml
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/saml/saml-dev-1.rockspec -- you should now edit and finish it.
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: saml dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Builing plugin disq_session
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]:
+Apr 08 12:32:39 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/disq_session/disq_session-dev-1.rockspec -- you should now edit and finish it.
+--
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/b6ada3c4-4fe2-e5ab-6024-9768cd97f329 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/5d7e03a7-1ad8-793f-e902-20da0e227aeb HTTP/1.1" 200 430 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/backend_public_info_service HTTP/1.1" 200 399 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/backend_public_info_service/routes/backend_public_info_route HTTP/1.1" 200 503 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/backend_public_info_service/plugins/aa2c01d7-0f67-a078-467b-3f2512258aa9 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service HTTP/1.1" 200 433 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/routes/saml_logout___users_saml_idp_sign_out_route HTTP/1.1" 200 533 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/2e8c195d-e238-d95d-487f-4bc566a14f49 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/fd52d212-d4d6-8c62-0fcb-02cf6a394e6f HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/8ca40d9a-7377-f769-dd05-7a94c032c0d7 HTTP/1.1" 200 332 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/e325a69e-fb3a-3577-63fd-310ffdcf3792 HTTP/1.1" 200 351 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service HTTP/1.1" 200 435 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/routes/saml_metadata_public__users_saml_metadata_route HTTP/1.1" 200 540 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/plugins/b2178e79-5409-4e6b-49a0-69e7a43df49d HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/watched_dashboards_api__service HTTP/1.1" 200 404 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/watched_dashboards_api__service/routes/watched_dashboards_api__route HTTP/1.1" 200 521 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/watched_dashboards_api__service/plugins/34edc328-82b4-d036-b0f3-fd827ed99fcf HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/watched_dashboards_api__service/plugins/f10ea862-9b8f-c377-2a9e-000921566aac HTTP/1.1" 200 343 "-" "python-requests/2.25.1"
+Apr 08 12:32:45 ip-10-200-118-28.ec2.internal disqover-kong-1[3817]: 172.18.0.6 - - [08/Apr/2024:12:32:45 +0000] "PUT /services/watched_dashboards_api__service/plugins/05c81355-6fcf-4b7a-ee6a-c4c4ce8f14b0 HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+--
+Apr 10 09:30:41 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/internal_keys/internal_keys-dev-1.rockspec -- you should now edit and finish it.
+Apr 10 09:30:41 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:41 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: internal_keys dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Builing plugin saml
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/saml/saml-dev-1.rockspec -- you should now edit and finish it.
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: saml dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Builing plugin disq_session
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:30:42 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/disq_session/disq_session-dev-1.rockspec -- you should now edit and finish it.
+--
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/b6ada3c4-4fe2-e5ab-6024-9768cd97f329 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/5d7e03a7-1ad8-793f-e902-20da0e227aeb HTTP/1.1" 200 430 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/backend_public_info_service HTTP/1.1" 200 399 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/backend_public_info_service/routes/backend_public_info_route HTTP/1.1" 200 503 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/backend_public_info_service/plugins/aa2c01d7-0f67-a078-467b-3f2512258aa9 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service HTTP/1.1" 200 433 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/routes/saml_logout___users_saml_idp_sign_out_route HTTP/1.1" 200 533 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/2e8c195d-e238-d95d-487f-4bc566a14f49 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/fd52d212-d4d6-8c62-0fcb-02cf6a394e6f HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/8ca40d9a-7377-f769-dd05-7a94c032c0d7 HTTP/1.1" 200 332 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/e325a69e-fb3a-3577-63fd-310ffdcf3792 HTTP/1.1" 200 351 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service HTTP/1.1" 200 435 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/routes/saml_metadata_public__users_saml_metadata_route HTTP/1.1" 200 540 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/plugins/b2178e79-5409-4e6b-49a0-69e7a43df49d HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/watched_dashboards_api__service HTTP/1.1" 200 404 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/watched_dashboards_api__service/routes/watched_dashboards_api__route HTTP/1.1" 200 521 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/watched_dashboards_api__service/plugins/34edc328-82b4-d036-b0f3-fd827ed99fcf HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/watched_dashboards_api__service/plugins/f10ea862-9b8f-c377-2a9e-000921566aac HTTP/1.1" 200 343 "-" "python-requests/2.25.1"
+Apr 10 09:30:48 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:30:48 +0000] "PUT /services/watched_dashboards_api__service/plugins/05c81355-6fcf-4b7a-ee6a-c4c4ce8f14b0 HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+--
+Apr 10 09:37:28 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/internal_keys/internal_keys-dev-1.rockspec -- you should now edit and finish it.
+Apr 10 09:37:28 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:28 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: internal_keys dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Builing plugin saml
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/saml/saml-dev-1.rockspec -- you should now edit and finish it.
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: saml dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Builing plugin disq_session
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:37:29 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/disq_session/disq_session-dev-1.rockspec -- you should now edit and finish it.
+--
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/b6ada3c4-4fe2-e5ab-6024-9768cd97f329 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/5d7e03a7-1ad8-793f-e902-20da0e227aeb HTTP/1.1" 200 430 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/backend_public_info_service HTTP/1.1" 200 399 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/backend_public_info_service/routes/backend_public_info_route HTTP/1.1" 200 503 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/backend_public_info_service/plugins/aa2c01d7-0f67-a078-467b-3f2512258aa9 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service HTTP/1.1" 200 433 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/routes/saml_logout___users_saml_idp_sign_out_route HTTP/1.1" 200 533 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/2e8c195d-e238-d95d-487f-4bc566a14f49 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/fd52d212-d4d6-8c62-0fcb-02cf6a394e6f HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/8ca40d9a-7377-f769-dd05-7a94c032c0d7 HTTP/1.1" 200 332 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/e325a69e-fb3a-3577-63fd-310ffdcf3792 HTTP/1.1" 200 351 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service HTTP/1.1" 200 435 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/routes/saml_metadata_public__users_saml_metadata_route HTTP/1.1" 200 540 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/plugins/b2178e79-5409-4e6b-49a0-69e7a43df49d HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/watched_dashboards_api__service HTTP/1.1" 200 404 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/watched_dashboards_api__service/routes/watched_dashboards_api__route HTTP/1.1" 200 521 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/watched_dashboards_api__service/plugins/34edc328-82b4-d036-b0f3-fd827ed99fcf HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/watched_dashboards_api__service/plugins/f10ea862-9b8f-c377-2a9e-000921566aac HTTP/1.1" 200 343 "-" "python-requests/2.25.1"
+Apr 10 09:37:35 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:37:35 +0000] "PUT /services/watched_dashboards_api__service/plugins/05c81355-6fcf-4b7a-ee6a-c4c4ce8f14b0 HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+--
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/internal_keys/internal_keys-dev-1.rockspec -- you should now edit and finish it.
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: internal_keys dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Builing plugin saml
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/saml/saml-dev-1.rockspec -- you should now edit and finish it.
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: saml dev-1 is now installed in /usr/local (license: *** please specify a license ***)
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Builing plugin disq_session
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Warning: Please specify supported Lua versions with --lua-versions=<ver>. See '/usr/local/bin/luarocks help write_rockspec'.
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]:
+Apr 10 09:38:04 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: Wrote template at /usr/local/share/lua/5.1/kong/plugins/disq_session/disq_session-dev-1.rockspec -- you should now edit and finish it.
+--
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/b6ada3c4-4fe2-e5ab-6024-9768cd97f329 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/themis_m2m_user_templates_service/plugins/5d7e03a7-1ad8-793f-e902-20da0e227aeb HTTP/1.1" 200 430 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/backend_public_info_service HTTP/1.1" 200 399 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/backend_public_info_service/routes/backend_public_info_route HTTP/1.1" 200 503 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/backend_public_info_service/plugins/aa2c01d7-0f67-a078-467b-3f2512258aa9 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service HTTP/1.1" 200 433 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/routes/saml_logout___users_saml_idp_sign_out_route HTTP/1.1" 200 533 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/2e8c195d-e238-d95d-487f-4bc566a14f49 HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/fd52d212-d4d6-8c62-0fcb-02cf6a394e6f HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/8ca40d9a-7377-f769-dd05-7a94c032c0d7 HTTP/1.1" 200 332 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_logout___users_saml_idp_sign_out_service/plugins/e325a69e-fb3a-3577-63fd-310ffdcf3792 HTTP/1.1" 200 351 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service HTTP/1.1" 200 435 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/routes/saml_metadata_public__users_saml_metadata_route HTTP/1.1" 200 540 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/saml_metadata_public__users_saml_metadata_service/plugins/b2178e79-5409-4e6b-49a0-69e7a43df49d HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/watched_dashboards_api__service HTTP/1.1" 200 404 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/watched_dashboards_api__service/routes/watched_dashboards_api__route HTTP/1.1" 200 521 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/watched_dashboards_api__service/plugins/34edc328-82b4-d036-b0f3-fd827ed99fcf HTTP/1.1" 200 265 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/watched_dashboards_api__service/plugins/f10ea862-9b8f-c377-2a9e-000921566aac HTTP/1.1" 200 343 "-" "python-requests/2.25.1"
+Apr 10 09:38:10 ip-10-200-118-28.ec2.internal disqover-kong-1[3752]: 172.18.0.6 - - [10/Apr/2024:09:38:10 +0000] "PUT /services/watched_dashboards_api__service/plugins/05c81355-6fcf-4b7a-ee6a-c4c4ce8f14b0 HTTP/1.1" 200 633 "-" "python-requests/2.25.1"
